@@ -1,0 +1,41 @@
+DEALER is the “Number 1 accounting hack” for accounting, according to the Accounting Stuff YouTube video.
+
+Dealer is an acronym:
+Debit accounts: Dividends, Expenses, Assets
+Go on “left”
+Debits increase these balances, Credits decrease them
+Credit accounts: Liabilities, Equity, Revenue
+Go on “right”
+Credits increase these balances, and Debits decrease them
+
+True meaning of debits and credits in accounting:
+“Every financial transaction involves a flow of economic benefit from a source to a destination”
+Credits represent the Sources that economic benefit can flow from
+Debits represent the Destinations that economic benefit can flow to
+Intuitive explanation:
+If a business holds some cash, broadly speaking, there are only 3 possible places that cash could come from (IE Source):
+Borrowed from a third-party like a bank (Liabilities)
+Owner invested into business from his/her own pocket (Equity)
+Business earned it by selling a product or service (Revenue)
+And, there are only three places that the business could spend that cash back to (IE Destination):
+Distribute it back to the owners (Dividend)
+Pay the business’s bills like rent or employee salaries (Expenses)
+Purchase assets, like a laptop to work on (Assets)
+
+Worked Examples - Credits and Debits
+The owner of a car wash provides their company with a $1,000 initial investment. Is the entry to the company’s cash account a debit or a credit?
+Debit
+Explanation: The $1000 investment causes cash to increase and cash is an asset (a normal debit account), so the entry is a debit.
+The owner of a car wash provides their company with a $1,000 initial investment. Is the entry to the company’s owner’s equity account a debit or a credit?
+Credit
+Explanation 1 (DEALER): The $1000 investment causes owner’s equity to increase and owner’s equity is an equity account (a normal credit account), so the entry is a credit.
+Explanation 2 (principle of double-entry bookkeeping): Since there are two equal and opposite sides to every financial transaction, we know that since cash was debited we need to credit the other side of the transaction to keep everything balanced.
+The car wash pays a supplier $200 in cash, which account is debited? Accounts Payable or Cash?
+Accounts Payable
+Explanation: A payment from the cash account causes cash to decrease and cash is an asset (a normal debit account), so the cash entry is a credit. This payment would also decrease Accounts Payable which is a liability (a normal credit account), so the accounts payble entry is a debit.
+A customer gets their car washed for $10. They pay on account with 30 day credit terms. Which account is credited? Revenue, cash or accounts receivable?
+Revenue
+Explanation: A customer paying on credit causes Accounts Receivable to increase. Accounts Receivable is an Asset account (a normal debit account), so the accounts receivable entry is a debit. Revenue is increased as well. Since Revenue is a credit account and it increases, it is credited, and this is the answer. Cash is not impacted.
+The following month, the car wash receives $10 from the customer. Which account is credited? Revenue, cash or accounts receivable?
+Accounts Receivable
+Explanation: Receiving $10 causes cash to increase and accounts receivable to decrease. Cash is an asset (normal debit account), so cash is debited. Accounts receivable is an asset (normal debit account) as well, so since it decreases, it is credited. Revenue is not impacted.
