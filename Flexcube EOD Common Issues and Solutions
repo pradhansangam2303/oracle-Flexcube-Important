@@ -1,0 +1,101 @@
+EOD Common Issues and Solutions (General Information at the end of this document)
+-----------------------------------------------------------------------------------------------------------------------------
+AC-FINBL1 ( Real Dr $1 And Real Cr $2 Dont Match for Cycle $3 And Period $4 ) 
+-----------------------------------------------------------------------------
+
+This error would be before marking EOTI, and is due to the data being incorrect in ACTB_DAILY_LOG itself, with debits and credits might not match within Real and Contingent books for the day. This problem usually occurs in DE module only, either single entry or batch upload.  Point this out to the bank first, and ask them to reverse/delete it.  In the unlikely scenario of the bank staff unable to do anything at that time,  ask them for an authorization mail to delete/update the data, and then you can do a back-end update. Check out the reference 'Deleting a batch'.
+
+The problem also might occur due to incorrect batch deletions/authorizations. In such a case, under the concurrence of the bank staff, delete/authorize accounting entries by invoking ACPKS.fn_acservice.
+
+The brchk.sql (present in the GL-MIS folder of MICK area) will help in identifying the mismatch (if any).
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+ED-12001/ED-12002 (Credit and Debit Balances Not Matching for Real GLs)
+------------------------------------------------------------------------
+    
+This error happens before marking EOD and its is due to GL balances Mismatch.
+Please do not run a GL rebuild blindly.  
+
+To find the entries causing the mismatch,
+
+1/ Run the trial balance utility (scripts available in \\cbpgsupp\flexsupp\MICK\GL-MIS\tbal\trialbalance folder)
+   It will give the error in both customer and internal gl's. 
+	
+2/ Get all entries from ACTB_DAILY_LOG (including deleted) for the account(s)/gl(s) that has the problem. Analyze the data and find out which reference number caused the problem. After all the amount should tally to some entry/entries.    
+
+Run the GL Rebuild stub to rectify the mismatch. Check out the reference 'GL Rebuild'.
+
+The brchk.sql (present in the GL-MIS folder of MICK area) will help in identifying the mismatch (if any).
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Not able to mark EOTI (ED-10003) (Maintanence related tables)
+-------------------------------------------------------------
+
+The EOC --> View Unauthorized Maintenance screen will show the data even though all the maintenance is authorized.
+Check the table sttb_record_log where record_stat = 'U'. For such records, find out the table_name field and the corresponding maintenance. Ask them to authorize such a maintenance. Usually they will not be able to do this ( some bug here again ). In such a case, update sttb_record_log.record_stat = 'A'. Request the users to try and simulate the problem the following day.
+
+You can check the pending items for authorization, by executing the pending.sql (available in the EOC folder of MICK area).
+Quering the stvws_unauth_forms will help.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Not able to mark EOTI (ED-10003) (On-line transactions)
+-------------------------------------------------------
+
+The EOC --> View Unauthorized screen will show unauthorized online transactions even though they may have been authorized.
+In case of online tables, execute the view EIVW_PENDING_ITEMS.  Ask the user to spool out the view definition.  This view queries a lot of other underlying views.  Ask the user to execute each of those views and find out which view is returning rows. Accordingly findout the table which has auth stat = 'U' and update it accordingly. In most cases, the culprit would be the ACTB_DAILY_LOG where the AUTH_STAT would be 'U'. Authorize it by calling the ACPKS.fn_acservice (passing parameter PACTIONCODE as 'A').
+
+The pending.sql (available in the EOC folder of MICK area) has the split queries on EIVW_PENDING_ITEMS. This can help in identifying the unauthorized online transactions.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Deleting a batch
+----------------
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+GL Rebuild
+----------
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+'Not all reports generated' error while marking EOD
+---------------------------------------------------
+
+Check with the users to find out if all the reports have been generated.
+If 'YES', then get the details from the RPTB_SERVER_REPORT (where status = 'P') and update the status to 'S'.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+'Users in Transaction Input while marking EOD' error even though there are no users logged in except the EOD Operator
+---------------------------------------------------------------------------------------------------------------------
+
+Check for records in SMTB_SMS_LOG where exit_flag is NULL.
+Update the exit_flag = 1 for the records having exit_flag as NULL.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+'Mandatory programs of current status not completed. Change of status not allowed' (ED-10002)
+---------------------------------------------------------------------------------------------
+
+Check if the user has run all the programs set for the current status, before trying to proceed with the status change
+-----------------------------------------------------------------------------------------------------------------------------
+
+General Information
+--------------------
+- For module wise batch issues, also refer to corresponding module wise 'Common Issues' document.
+   * AC-HOF01 (Mandatory fields not found) during LD batch (Refer LD_Common_Issues.txt)
+
+- Happy Night Shift Supporting !!! Hopefully the Night Shift Status report should say 'No Issues Reported' !!!
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+Issues to be updated
+---------------------
+AEOD - If a batch bombs, during AEOD and is run manually, it does not update the AETB related tables and rest of the activity  for the branch is not displayed for it to be selected.
+
+AEOD - Holiday maintenance has to be done 2 days ahead in case the are using AEOD. Else there is a chance of the system date being updated wrongly
+
