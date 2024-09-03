@@ -1,0 +1,128 @@
+Table Name	Purpose	
+ICTM_ACC	Account - To store booking, calculation accounts, Interest start Date etc.	ICTM_ACC-->Account - To store booking, calculation accounts, Interest start Date etc.
+ICTB_ADJ_INTEREST	Accrual - Adjustment interest in case of back valuation.	ICTB_ADJ_INTEREST-->Accrual - Adjustment interest in case of back valuation.
+ICTB_ADJ_INTEREST_HISTORY	Accrual - Adjustment interest in case of back valuation.	ICTB_ADJ_INTEREST_HISTORY-->Accrual - Adjustment interest in case of back valuation.
+ICTB_BOOK_ERR	Accrual - Exception table.	ICTB_BOOK_ERR-->Accrual - Exception table.
+ICTB_RACR	Accrual - Reverse accruals table.	ICTB_RACR-->Accrual - Reverse accruals table.
+ICTB_ACQUIRED_INTR	Accrual - Stores acquired interest details.	ICTB_ACQUIRED_INTR-->Accrual - Stores acquired interest details.
+ICTM_BRANCH_PARAMETERS	Branch level parameters for IC.	ICTM_BRANCH_PARAMETERS-->Branch level parameters for IC.
+ICTB_BACK_DATED_EVENTS	Calculation - Check	ICTB_BACK_DATED_EVENTS-->Calculation - Check
+ICTB_BACK_DATED_UDEVALS	Calculation - Check	ICTB_BACK_DATED_UDEVALS-->Calculation - Check
+ICTB_CALC_ERR	Calculation - Exception table.	ICTB_CALC_ERR-->Calculation - Exception table.
+ICTB_IIS_VAL	Calculation - Table populated while generating Interest calculation report.	ICTB_IIS_VAL-->Calculation - Table populated while generating Interest calculation report.
+ICTB_IS_VALS	Calculation - Table populated while generating Interest statement.	ICTB_IS_VALS-->Calculation - Table populated while generating Interest statement.
+ICTW_BACK_PR	Calculation - Work table used during calculation to back ictb_acc_pr.	ICTW_BACK_PR-->Calculation - Work table used during calculation to back ictb_acc_pr.
+ICTW_ENTRIES	Calculation - Work table used during calculation to back ictb_entries.	ICTW_ENTRIES-->Calculation - Work table used during calculation to back ictb_entries.
+ICTW_BACK_IS_VALS	Calculation - Work table used during calculation to back ictb_is_vals.	ICTW_BACK_IS_VALS-->Calculation - Work table used during calculation to back ictb_is_vals.
+ICTB_ENTRIES_HISTORY	Calculation/ Accrual/ Liquidation - entries history	ICTB_ENTRIES_HISTORY-->Calculation/ Accrual/ Liquidation - entries history
+ICTB_ENTRIES	Calculation/ Accrual/ Liquidation - This table contains data where the current accrual /amt to accrue /amt accrued data is present. This will be a summary table of ICTBS_ENTRIES_HISTORY for the last liquidation cycle. 	ICTB_ENTRIES-->Calculation/ Accrual/ Liquidation - This table contains data where the current accrual /amt to accrue /amt accrued data is present. This will be a summary table of ICTBS_ENTRIES_HISTORY for the last liquidation cycle. 
+ICTB_CHG_DUE	CHARGE	ICTB_CHG_DUE-->CHARGE
+ICTB_CHG_ERR	CHARGE	ICTB_CHG_ERR-->CHARGE
+ICTB_CHG_ITEMS	CHARGE	ICTB_CHG_ITEMS-->CHARGE
+ICTB_CHG_PAID	CHARGE	ICTB_CHG_PAID-->CHARGE
+ICTB_CHG_VAL	CHARGE	ICTB_CHG_VAL-->CHARGE
+ICTB_CHG_VAL_HISTORY	CHARGE	ICTB_CHG_VAL_HISTORY-->CHARGE
+ICTM_ACC_CHG_CONSOL	CHARGE	ICTM_ACC_CHG_CONSOL-->CHARGE
+ICTM_ACC_CHG_SLAB	CHARGE	ICTM_ACC_CHG_SLAB-->CHARGE
+ICTM_PR_CHG	CHARGE	ICTM_PR_CHG-->CHARGE
+ICTM_PR_CHG_ACLASS	CHARGE	ICTM_PR_CHG_ACLASS-->CHARGE
+ICTM_PR_CHG_CONSOL	CHARGE	ICTM_PR_CHG_CONSOL-->CHARGE
+ICTM_PR_CHG_CONSOL_ACLASS	CHARGE	ICTM_PR_CHG_CONSOL_ACLASS-->CHARGE
+ICTM_PR_CHG_PRODS	CHARGE	ICTM_PR_CHG_PRODS-->CHARGE
+ICTM_PR_CHG_SLAB	CHARGE	ICTM_PR_CHG_SLAB-->CHARGE
+ICTM_PR_CHG_TXN	CHARGE	ICTM_PR_CHG_TXN-->CHARGE
+ICTB_SPL_ELEM_VALS	Check	ICTB_SPL_ELEM_VALS-->Check
+ICTB_ACCR_HISTORY	IGNORE	ICTB_ACCR_HISTORY-->IGNORE
+ICTB_ACC_CHG_CONSOL_HISTORY	IGNORE	ICTB_ACC_CHG_CONSOL_HISTORY-->IGNORE
+ICTB_ACC_PR_HISTORY	IGNORE	ICTB_ACC_PR_HISTORY-->IGNORE
+ICTB_ACC_PR_LOG	IGNORE	ICTB_ACC_PR_LOG-->IGNORE
+ICTB_ACC_PR_TEMP	IGNORE	ICTB_ACC_PR_TEMP-->IGNORE
+ICTB_ACQUIRED_INTR_HISTORY	IGNORE	ICTB_ACQUIRED_INTR_HISTORY-->IGNORE
+ICTB_APY	IGNORE	ICTB_APY-->IGNORE
+ICTB_APY_HISTORY	IGNORE	ICTB_APY_HISTORY-->IGNORE
+ICTB_BD_ITM_TOV_INTMDT	IGNORE	ICTB_BD_ITM_TOV_INTMDT-->IGNORE
+ICTB_CALC_QUEUE	IGNORE	ICTB_CALC_QUEUE-->IGNORE
+ICTB_CCY_PAIR	IGNORE	ICTB_CCY_PAIR-->IGNORE
+ICTB_CONSOL_BD_BAL	IGNORE	ICTB_CONSOL_BD_BAL-->IGNORE
+ICTB_CONSOL_VD_BAL	IGNORE	ICTB_CONSOL_VD_BAL-->IGNORE
+ICTB_CTL	IGNORE	ICTB_CTL-->IGNORE
+ICTB_DEPOSIT_EXCEPTION	IGNORE	ICTB_DEPOSIT_EXCEPTION-->IGNORE
+ICTB_DEPOSIT_EXECUTION_LOG	IGNORE	ICTB_DEPOSIT_EXECUTION_LOG-->IGNORE
+ICTB_DEPOSIT_INSTRUCTION	IGNORE	ICTB_DEPOSIT_INSTRUCTION-->IGNORE
+ICTB_DLY_MSG_OUT	IGNORE	ICTB_DLY_MSG_OUT-->IGNORE
+ICTB_DR_INT_DUE	IGNORE	ICTB_DR_INT_DUE-->IGNORE
+ICTB_DR_INT_ERR	IGNORE	ICTB_DR_INT_ERR-->IGNORE
+ICTB_DR_INT_PAID	IGNORE	ICTB_DR_INT_PAID-->IGNORE
+ICTB_ENTRIES_HISTORY_LOG	IGNORE	ICTB_ENTRIES_HISTORY_LOG-->IGNORE
+ICTB_ENTRIES_INTMDT	IGNORE	ICTB_ENTRIES_INTMDT-->IGNORE
+ICTB_ENTRIES_LOG	IGNORE	ICTB_ENTRIES_LOG-->IGNORE
+ICTB_ENTRIES_UPLOAD	IGNORE	ICTB_ENTRIES_UPLOAD-->IGNORE
+ICTB_EXPR_FUNCTION	IGNORE	ICTB_EXPR_FUNCTION-->IGNORE
+ICTB_FUNCTION_DEF	IGNORE	ICTB_FUNCTION_DEF-->IGNORE
+ICTB_ITM_TOV	IGNORE	ICTB_ITM_TOV-->IGNORE
+ICTB_ITM_TOV_UPLOAD	IGNORE	ICTB_ITM_TOV_UPLOAD-->IGNORE
+ICTB_LIQ_RECON	IGNORE	ICTB_LIQ_RECON-->IGNORE
+ICTB_LOCK	IGNORE	ICTB_LOCK-->IGNORE
+ICTB_PURGE_LOG	IGNORE	ICTB_PURGE_LOG-->IGNORE
+ICTB_RCA	IGNORE	ICTB_RCA-->IGNORE
+ICTB_TDS_DETAILS	IGNORE	ICTB_TDS_DETAILS-->IGNORE
+ICTB_UDE_UTIL	IGNORE	ICTB_UDE_UTIL-->IGNORE
+ICTB_UDE_UTIL_CHG_DETAIL	IGNORE	ICTB_UDE_UTIL_CHG_DETAIL-->IGNORE
+ICTB_UDE_UTIL_LOG	IGNORE	ICTB_UDE_UTIL_LOG-->IGNORE
+ICTB_UDE_UTIL_LOG_DETAIL	IGNORE	ICTB_UDE_UTIL_LOG_DETAIL-->IGNORE
+ICTB_UDE_UTIL_QUERY_DETAIL	IGNORE	ICTB_UDE_UTIL_QUERY_DETAIL-->IGNORE
+ICTB_VD_ITM_TOV_INTMDT	IGNORE	ICTB_VD_ITM_TOV_INTMDT-->IGNORE
+ICTB_XLOG	IGNORE	ICTB_XLOG-->IGNORE
+ICTM_ACC_LOG	IGNORE	ICTM_ACC_LOG-->IGNORE
+ICTM_CUSTOMER_TAX	IGNORE	ICTM_CUSTOMER_TAX-->IGNORE
+ICTM_CUSTOMER_TAX_UPLOAD	IGNORE	ICTM_CUSTOMER_TAX_UPLOAD-->IGNORE
+ICTM_NETTING_PRIORITY_DETAIL	IGNORE	ICTM_NETTING_PRIORITY_DETAIL-->IGNORE
+ICTM_NETTING_PRIORITY_MASTER	IGNORE	ICTM_NETTING_PRIORITY_MASTER-->IGNORE
+ICTM_PROD_EV_ACCENT_HIST	IGNORE	ICTM_PROD_EV_ACCENT_HIST-->IGNORE
+ICTM_PURGE	IGNORE	ICTM_PURGE-->IGNORE
+ICTM_RATE_BRN	IGNORE	ICTM_RATE_BRN-->IGNORE
+ICTM_RATE_BRN_DEF	IGNORE	ICTM_RATE_BRN_DEF-->IGNORE
+ICTM_RATE_DEF	IGNORE	ICTM_RATE_DEF-->IGNORE
+ICTM_RATE_EXPR	IGNORE	ICTM_RATE_EXPR-->IGNORE
+ICTM_TD_DETAILS	IGNORE	ICTM_TD_DETAILS-->IGNORE
+ICTM_UPLOAD_ACC	IGNORE	ICTM_UPLOAD_ACC-->IGNORE
+ICTM_UPLOAD_RATES	IGNORE	ICTM_UPLOAD_RATES-->IGNORE
+ICTM_UPLOAD_RATE_DEF	IGNORE	ICTM_UPLOAD_RATE_DEF-->IGNORE
+ICTM_USREG_PARAM	IGNORE	ICTM_USREG_PARAM-->IGNORE
+ICTW_ACCPR_SEL	IGNORE	ICTW_ACCPR_SEL-->IGNORE
+ICTW_MEMO_BOOKING	IGNORE	ICTW_MEMO_BOOKING-->IGNORE
+ICVW_UDEVALS_TAB	IGNORE	ICVW_UDEVALS_TAB-->IGNORE
+ICTM_IS_FMT	Interest Statement.	ICTM_IS_FMT-->Interest Statement.
+ICTM_IS_FMT_DESC	Interest Statement.	ICTM_IS_FMT_DESC-->Interest Statement.
+ICTM_IS_HDR	Interest Statement.	ICTM_IS_HDR-->Interest Statement.
+ICTB_ACC_ACTION	OLDIC - Account action for resolution.	ICTB_ACC_ACTION-->OLDIC - Account action for resolution.
+ICTB_ACTION_LOG	OLDIC - Account action for resolution.	ICTB_ACTION_LOG-->OLDIC - Account action for resolution.
+ICTM_PRODUCT_DEFINITION	Product - Master table.	ICTM_PRODUCT_DEFINITION-->Product - Master table.
+ICTM_PR_INT	Product - Preferences table -- accrual, liquidation frequency etc.	ICTM_PR_INT-->Product - Preferences table -- accrual, liquidation frequency etc.
+ICTM_PR_INT_ACLASS	Product - Product linking to account class+currency combination.	ICTM_PR_INT_ACLASS-->Product - Product linking to account class+currency combination.
+ICTM_PRODUCT_STATUS	Product - Status Table.	ICTM_PRODUCT_STATUS-->Product - Status Table.
+ICTB_UDEVAL_ROW	Resolution - Check	ICTB_UDEVAL_ROW-->Resolution - Check
+ICTW_MAKE_ROW	Resolution - Check	ICTW_MAKE_ROW-->Resolution - Check
+ICTB_RESOLUTION_ERROR	Resolution - Exception table.	ICTB_RESOLUTION_ERROR-->Resolution - Exception table.
+ICTB_UDEVALS	Resolution - UDEVALS resolved.This is a worktable in IC . This gets populated as a result of IC resolution. The maximum amount of calculation error is because of error in populating this table.This will have the UDE vals used by IC during calculation. You can get rows on cond_key like %account_no% for a SC or like %ac_classccy% for GC. Check the correctness of this table before doing a manual calculation.Get the records from ictms_pr_int_udevals for the current day and check if they are same in udevals.   	ICTB_UDEVALS-->Resolution - UDEVALS resolved.This is a worktable in IC . This gets populated as a result of IC resolution. The maximum amount of calculation error is because of error in populating this table.This will have the UDE vals used by IC during calculation. You can get rows on cond_key like %account_no% for a SC or like %ac_classccy% for GC. Check the correctness of this table before doing a manual calculation.Get the records from ictms_pr_int_udevals for the current day and check if they are same in udevals.   
+ICTB_ACC_PR	Resolution - This is the basic table which drives the calculations. This table has the data like the next/last calc_dt , accr_dt , liqn_dt. By looking at this table we will have a fair bit of understanding where its gone wrong. Check if the dates are proper following the liqn/accr frequency, Check the has_problems flag , check gc_map_dt and sc_map_dt ( the dates on which the account is linked to the product )	ICTB_ACC_PR-->Resolution - This is the basic table which drives the calculations. This table has the data like the next/last calc_dt , accr_dt , liqn_dt. By looking at this table we will have a fair bit of understanding where its gone wrong. Check if the dates are proper following the liqn/accr frequency, Check the has_problems flag , check gc_map_dt and sc_map_dt ( the dates on which the account is linked to the product )
+ICTB_MAINT_QUEUE	"Resolution - This table holds a record for any change made for which resolution will be required.
+AC - Account level change, RU - Rule Change, PR -Product Change, SC - Special condition Change, UD - UDE values Change, RA - UDE Int Rate change."	"ICTB_MAINT_QUEUE-->Resolution - This table holds a record for any change made for which resolution will be required.
+AC - Account level change, RU - Rule Change, PR -Product Change, SC - Special condition Change, UD - UDE values Change, RA - UDE Int Rate change."
+ICTB_UDEVALS_HISTORY	Resolution - UDEVALS history.	ICTB_UDEVALS_HISTORY-->Resolution - UDEVALS history.
+ICTW_ACC_PR	Resolution - Work table used for ACC_PR during resolution.	ICTW_ACC_PR-->Resolution - Work table used for ACC_PR during resolution.
+ICTW_MAINT_QUEUE	Resolution - Work table used to store records to be resolved during resolution.	ICTW_MAINT_QUEUE-->Resolution - Work table used to store records to be resolved during resolution.
+ICTM_IS_ELEMS	Rule - Elements used in the rule.	ICTM_IS_ELEMS-->Rule - Elements used in the rule.
+ICTM_EXPR	Rule - Expression in the rule.	ICTM_EXPR-->Rule - Expression in the rule.
+ICTM_RULE_FRM_ELEMENTS	Rule - Rule formula elements.	ICTM_RULE_FRM_ELEMENTS-->Rule - Rule formula elements.
+ICTM_RULE_FRM	Rule - Rule formulae table. (Rule_id+Frm_no)	ICTM_RULE_FRM-->Rule - Rule formulae table. (Rule_id+Frm_no)
+ICTM_RULE	Rule - Rule master Table. (Rule_id)	ICTM_RULE-->Rule - Rule master Table. (Rule_id)
+ICTM_RULE_SDE	Rule - SDEs for a rule.	ICTM_RULE_SDE-->Rule - SDEs for a rule.
+ICTM_RULE_UDE	Rule - UDEs for a rule.	ICTM_RULE_UDE-->Rule - UDEs for a rule.
+ICTM_SDE	SDE - SDE definition.	ICTM_SDE-->SDE - SDE definition.
+ICTM_ACC_EFFDT	Special Condition - Effective date for special condition brn+acc+prod+effdt.	ICTM_ACC_EFFDT-->Special Condition - Effective date for special condition brn+acc+prod+effdt.
+ICTM_ACC_PR	Special Condition - Special condition products at account level brn+acc+prod.	ICTM_ACC_PR-->Special Condition - Special condition products at account level brn+acc+prod.
+ICTM_ACC_UDEVALS	Special Condition - UDE values for special condtion account brn+acc+prod+eff_dt+ude_id.	ICTM_ACC_UDEVALS-->Special Condition - UDE values for special condtion account brn+acc+prod+eff_dt+ude_id.
+ICTM_RATES	UDE - IC rates	ICTM_RATES-->UDE - IC rates
+ICTM_PR_INT_EFFDT	UDE - Ude master table for prod+aclass+currency+Effective date combination.	ICTM_PR_INT_EFFDT-->UDE - Ude master table for prod+aclass+currency+Effective date combination.
+ICTM_PR_INT_UDEVALS	UDE - Ude Values for  prod+aclass+currency+Effective date+ude_id combination.	ICTM_PR_INT_UDEVALS-->UDE - Ude Values for  prod+aclass+currency+Effective date+ude_id combination.
