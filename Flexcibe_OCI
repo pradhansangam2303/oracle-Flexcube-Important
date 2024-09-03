@@ -1,0 +1,76 @@
+Architecture
+Oracle Banking Suite provides the industry’s broadest set of domain-driven banking solutions. Solutions offer complete front-to-back from the customer digital experience layer to the banking processors, or core banking domains. This architecture follows a modular approach that provides customers with maximum flexibility when designing their digital transformation journey. This strategy supports initiatives that focus on the customer experience layer, maximizing the bank’s efficiency by providing new business processes and experiences for bankers, to complete front-to-bank initiatives that include the modernization of the product processors.
+
+
+OCI Dedicated Region
+
+The preferred deployment model for the Oracle Banking Suite is cloud-based, using OCI public cloud IaaS and PaaS, or pure SaaS offerings. The Oracle Banking Suite and components like Oracle FLEXCUBE Universal Banking, execute mission-critical business processes, often handling sensitive data in highly regulated businesses like financial services.
+
+Oracle delivers all its public cloud services on-premises in a physical location of the customer's choosing. Customers have access to the same IaaS, PaaS, and SaaS services in the public cloud, with the same subscription-based pricing model. Customers can start small and build fast, with the base footprint including 18 racks and expanding to more than 450 racks.
+
+OCI Dedicated Region offers the exact same set of public cloud services available in the public regions of OCI. OCI Dedicated Region is also certified to run Oracle SaaS products, such as Oracle Fusion Cloud ERP, Financials, HCM, and SCM, offering a completely integrated cloud experience. With OCI Dedicated Region, you can use OCI’s cloud services for lift-and-shift scenarios to upgrade legacy applications and more, such as:
+
+Easily modernize your legacy applications using any combination of more than 80 of Oracle’s public cloud services.
+Increase agility and innovation by accessing new cloud services and features on-premises as soon as Oracle makes them available in public cloud regions.
+Lower your cost of running on-premises workloads with Oracle Cloud Infrastructure’s industry-leading price-performance and highest levels of security.
+This is the only product to offer a fully integrated cloud experience on-premises for IaaS, PaaS, and SaaS (including Oracle SaaS applications for ERP financials and HCM).
+OCI Dedicated Region offers hardened physical and perimeter network security while enhancing the platform, data, and applications security with Oracle security controls and services. OCI Dedicated Region follows the same defense-in-depth architecture and provides security controls at all layers of the stack.
+
+OCI Dedicated Region also offers:
+
+Security-first design. Clean hardware and firmware, strong tenant isolation, least privilege everywhere, and continuous monitoring.
+Only Oracle certifies services for SOC 1, SOC 2, ISO 27001, 27017, and 27018, HIPAA, and PCI DSS compliance at no additional cost.
+Default data encryption at rest and in transit, with customer-controlled keys stored in FIPS 140-2 Level 3–certified hardware.
+Zero-downtime patching and OS management. Access new security updates as Oracle makes them available in public cloud regions.
+Security zone deployment. Day one enforcement of prescriptive security policies and best practices.
+Automated, always-on cloud security posture management and remediation.
+Oracle FLEXCUBE Universal Banking Deployment on OCI Dedicated Region
+
+This architecture shows a highly available topology for deploying Oracle FLEXCUBE Universal Banking using OCI Dedicated Region.
+
+As OCI Dedicated Region resembles a public cloud region, the architecture is the same architecture used in public cloud, using fault domains to deploy Oracle Real Application Clusters and WebLogic Clusters to provide high availability and high performance. One important difference is that we will have direct data center connectivity to all on-premises applications, providing extremely low latency and high network performance.
+
+For disaster recovery, use a standard public region with Oracle Data Guard to replicate the database to the secondary Region.
+
+The following diagram illustrates this architecture.
+
+
+Description of flexcube-deployment-drcc.png follows
+Description of the illustration flexcube-deployment-drcc.png
+
+
+Download diagram
+The architecture has the following components:
+
+Region
+An Oracle Cloud Infrastructure region is a localized geographic area that contains one or more data centers, called availability domains. Regions are independent of other regions, and vast distances can separate them (across countries or even continents).
+
+Availability domains
+Availability domains are standalone, independent data centers within a region. The physical resources in each availability domain are isolated from the resources in the other availability domains, which provides fault tolerance. Availability domains don’t share infrastructure such as power or cooling, or the internal availability domain network. So, a failure at one availability domain is unlikely to affect the other availability domains in the region.
+
+Fault domains
+A fault domain is a grouping of hardware and infrastructure within an availability domain. Each availability domain has three fault domains with independent power and hardware. When you distribute resources across multiple fault domains, your applications can tolerate physical server failure, system maintenance, and power failures inside a fault domain.
+
+Virtual cloud network (VCN) and subnets
+A VCN is a customizable, software-defined network that you set up in an Oracle Cloud Infrastructure region. Like traditional data center networks, VCNs give you complete control over your network environment. A VCN can have multiple non-overlapping CIDR blocks that you can change after you create the VCN. You can segment a VCN into subnets, which can be scoped to a region or to an availability domain. Each subnet consists of a contiguous range of addresses that don't overlap with the other subnets in the VCN. You can change the size of a subnet after creation. A subnet can be public or private.
+
+Load balancer
+The Oracle Cloud Infrastructure Load Balancing service provides automated traffic distribution from a single entry point to multiple servers in the back end.
+
+Bastion host
+The bastion host is a compute instance that serves as a secure, controlled entry point to the topology from outside the cloud. The bastion host is provisioned typically in a demilitarized zone (DMZ). It enables you to protect sensitive resources by placing them in private networks that can't be accessed directly from outside the cloud. The topology has a single, known entry point that you can monitor and audit regularly. So, you can avoid exposing the more sensitive components of the topology without compromising access to them.
+
+DB systems
+For a small deployment, a VM.Standard2.2 shape is sufficient. This architecture uses a DB system with Oracle Database Enterprise Edition - Extreme Performance, using Oracle Real Application Clusters (RAC). It also uses Oracle Automatic Storage Management (Oracle ASM) with a minimum of 256 GB.
+
+Block volume
+With block storage volumes, you can create, attach, connect, and move storage volumes, and change volume performance to meet your storage, performance, and application requirements. After you attach and connect a volume to an instance, you can use the volume like a regular hard drive. You can also disconnect a volume and attach it to another instance without losing data.
+
+Object storage
+Object storage provides quick access to large amounts of structured and unstructured data of any content type, including database backups, analytic data, and rich content such as images and videos. You can safely and securely store and then retrieve data directly from the internet or from within the cloud platform. You can seamlessly scale storage without experiencing any degradation in performance or service reliability. Use standard storage for "hot" storage that you need to access quickly, immediately, and frequently. Use archive storage for "cold" storage that you retain for long periods of time and seldom or rarely access.
+
+Network address translation (NAT) gateway
+A NAT gateway enables private resources in a VCN to access hosts on the internet, without exposing those resources to incoming internet connections.
+
+Service gateway
+The service gateway provides access from a VCN to other services, such as Oracle Cloud Infrastructure Object Storage. The traffic from the VCN to the Oracle service travels over the Oracle network fabric and never traverses the internet.
