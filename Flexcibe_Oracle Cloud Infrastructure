@@ -31,17 +31,7 @@ This architecture shows a highly available topology for deploying Oracle FLEXCUB
 As OCI Dedicated Region resembles a public cloud region, the architecture is the same architecture used in public cloud, using fault domains to deploy Oracle Real Application Clusters and WebLogic Clusters to provide high availability and high performance. One important difference is that we will have direct data center connectivity to all on-premises applications, providing extremely low latency and high network performance.
 
 For disaster recovery, use a standard public region with Oracle Data Guard to replicate the database to the secondary Region.
-
-The following diagram illustrates this architecture.
-
-
-Description of flexcube-deployment-drcc.png follows
-Description of the illustration flexcube-deployment-drcc.png
-
-
-Download diagram
-The architecture has the following components:
-
+===========================================================================================================================================
 Region
 An Oracle Cloud Infrastructure region is a localized geographic area that contains one or more data centers, called availability domains. Regions are independent of other regions, and vast distances can separate them (across countries or even continents).
 
