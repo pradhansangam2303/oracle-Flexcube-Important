@@ -126,3 +126,60 @@ ICTM_ACC_UDEVALS	Special Condition - UDE values for special condtion account brn
 ICTM_RATES	UDE - IC rates	ICTM_RATES-->UDE - IC rates
 ICTM_PR_INT_EFFDT	UDE - Ude master table for prod+aclass+currency+Effective date combination.	ICTM_PR_INT_EFFDT-->UDE - Ude master table for prod+aclass+currency+Effective date combination.
 ICTM_PR_INT_UDEVALS	UDE - Ude Values for  prod+aclass+currency+Effective date+ude_id combination.	ICTM_PR_INT_UDEVALS-->UDE - Ude Values for  prod+aclass+currency+Effective date+ude_id combination.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ICTB_ACC_PR	
+This table stores information for a branch + account + product combination regarding various dates like NEXT_ACCR_DT, NEXT_LIQ_DT, NEXT_CALC_DT, NEXT_EVENT_DT, LAST_ACCR_DT, LAST_LIQ_DT, LAST_CALC_DT, etc. The NEXT_EVENT_DT is the minimum of the three dates in NEXT_ACCR_DT, NEXT_LIQ_DT, NEXT_CALC_DT. This table also stores information about when the account was linked to the product either through special conditions(SC_MAP_DT) or through general conditions (GC_MAP_DT). The column ‘HAS_PROBLEMS’ indicates whether IC batch processing encountered any problems or not while processing this account. The column ‘deposit’ indicates whether the IC product is a deposit kind of product. The column PROD_TYPE has  values ‘I’ for Interest type products and ‘C’ for Charge type products.          
+
+      
+          	
+BRN                    
+ACC                    
+PROD                   
+SC_MAP_DT              
+GC_MAP_DT              
+LAST_CALC_DT           
+LAST_LIQ_DT            
+NEXT_LIQ_DT            
+LAST_ACCR_DT           
+NEXT_ACCR_DT           
+LAST_SCHD_LIQ_DT       
+INC_MTH                
+NEXT_SCHD_LIQ_DT       
+FIRST_CALC_DT          
+NEXT_SCHD_ACCR_DT      
+PROD_TYPE              
+HAS_ACCR               
+NEXT_CALC_DT           
+PROD_ACCR              
+HAS_PROBLEMS           
+BKVAL_MINCALC_DATE     
+BKVAL_RECALC_FLAG      
+FIRST_FIRST_CALC_DATE  
+IMAT_PROBLEMS          
+DEPOSIT                
+NEXT_EVENT_DT          
+CCY                    
+ACLASS                 
+PROCESS                
+STOP_IC                
+TAX_PRODUCT            
+DEFER_LIQ_DT
+AC_CLASS_TYPE
+
+============================================================================================================================================
+
+
+12	
+ICPKS_TEST
+	
+Package	
+End of Day IC process (New IC).
+
+
+--------------------------------------------------------------------------------------------
+
+
+
