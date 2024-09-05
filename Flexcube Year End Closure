@@ -1,0 +1,5 @@
+Typically banks close books annually. The closure of books involves transfer of the P&L to the retained earnings accounts (Liability account) specified at the GL level (GLTM_GLMASTER.PROFIT_ACC or GLTM_GLMASTER.LOSS_ACC)
+The Year Closure is done by GLFINCLO by calling glpks_misc.fn_year_close
+Before the year close, the balances from the last user maintained period of the year (e.g. M12) are copied onto the period FIN. 
+The branch period code is updated to FIN and the Year Closure entries are passed. The branch period code is then updated back to M12.
+The date change function at the year end copies the balances from FIN to the first period of the next financial cycle.
