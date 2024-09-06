@@ -1,0 +1,38 @@
+GLTM_GL_MASTER
+ 	GL Master Table. Some of the Key Fields are:-
+GL_CODE    GL Account 
+GL_DESC     GL Account Description
+LEAF              Leaf or Node  Indicator
+CATEGORY    ( Asset / Liability/ Income / Expense etc..,)
+POSTING_RES  ( Yes or No)
+BLOCK	( Yes or No)
+REVAL   ( Yes or No )
+PROFIT_ACC  ( Year end profit account )
+LOSS_ACC    ( Year end loss account)
+PARENT_GL   ( Parent GL )
+ULTI_PARENT  ( Ultimate Parent GL)
+GLTB_GL_BAL
+	Contains the balances of the GLs that are maintained in the GL master table GLTM_GLMASTER and had transaction for the period. Here the GL records are stored  for a Branch, period code, financial year, currency code combination. It  stores the Debit and Credit balances, and the corresponding turnovers for a period.  The opening balance captured in this table is for the day ( not for the period). Important Fields in this table are as follows:-
+BRANCH_CODE 
+GL_CODE 
+CCY_CODE 
+FIN_YEAR 
+PERIOD_CODE
+LEAF (Y/N)  - Leaf or Node GL
+CATEGORY – (Asset, liab etc…)
+DR_MOV (Debit movement (turnover) on this GL in the txn ccy)
+CR_MOV (Credit movement (turnover) on this GL in the txn ccy)
+DR_MOV_LCY (Debit movement on this GL in the local ccy)
+CR_MOV_LCY (Credit movement on this GL in the local ccy)
+DR_BAL (Debit balance for this GL in txn ccy)
+CR_BAL (Credit balance for this GL in txn ccy)
+DR_BAL_LCY (Debit balance for this GL in local currency)
+CR_BAL_LCY (Debit balance for this GL in local currency)
+Similarly fields for opening balances -  OPEN_CR_BAL,OPEN_DR_BAL,OPEN_DR_BAL_LCY, OPEN_CR_BAL_LCY 
+GLTB_MISMATCH
+	This table will get populated during the GL balance rebuild process and stores the details of the Internal GL accounts which are having incorrect balance in GLTB_GL_BAL table. 
+Apart from the fields BRANCH_CODE, GL_CODE, CCY_CODE,   PERIOD_CODE, CATEGORY,FIN_YEAR  the most imp fields are  as follows:-
+BAL – (balance from gltb_gl_bal cr_bal – dr_bal)
+BAL_LCY – (Lcy balance)
+ACTUAL_BAL – Actual balance calculated from acvw
+ACTUAL_BAL_LCY – Actual balance in lcy calculated from acvw_all_ac_entries.
