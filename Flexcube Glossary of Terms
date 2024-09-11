@@ -1,0 +1,1122 @@
+
+
+
+FLEXCUBE CORPORATE
+Glossary of Terms
+Version 1.0
+
+
+ 
+TABLE OF CONTENTS
+AUTOMATIC END OF DAY OPERATIONS	3
+BILLS AND COLLECTIONS	5
+CURRENT ACCOUNT AND SAVINGS ACCOUNT	9
+CORE ENTITIES	10
+CORE SERVICES	13
+CENTRAL LIABILITY	15
+DATA ENTRY	17
+FCC-FCR INTERFACE GLOSSARY OF TERMS	22
+FOREIGN EXCHANGE	23
+FUNDS TRANSFER	26
+GENERAL LEDGER	30
+INTEREST AND CHARGES	32
+LETTERS OF CREDIT	35
+LOANS, DEPOSITS AND MONEY MARKET	42
+IMPLEMENTATION	47
+MANAGEMENT INFORMATION SYSTEM	48
+MESSAGING SYSTEM	50
+RECONCILIATION	52
+SECURITIES	54
+SECURITY MANAGEMENT SYSTEM	63
+STANDING INSTRUCTIONS	64
+
+ 
+AUTOMATIC END OF DAY OPERATIONS
+Beginning of Day
+The automatic processes initiated in the system at the beginning of each business day, as part of the AEOD.  The system date change is executed and the change authorized, and the system is in readiness to accept transaction input for the day.
+End of Cycle
+The stage of Automated End of Day (AEOD) processing wherein automatic functions that are marked EOC, after the End of Financial Input (EOFI) and before the EOD (End of Day) process, will be executed.
+End of Day (EOD)
+EOD is the last stage of AEOD processing in the system at the end of each business day, which indicates that all activities are complete for the business day.  Any further activities in the system can only begin after the Beginning of Day stage, when the system date is changed to the next working day.
+End of Financial Input (EOFI)
+The stage of AEOD processing that marks the end of the period during which accounting entries will be accepted by the system, for that business day.  The EOFI is the stage during which automatic functions scheduled after the End of Transaction Input and before the End of Cycle stages, will be executed.
+End of Transaction Input (EOTI)
+The stage of AEOD that indicates that all transactions for the business day have been entered and authorized and the automatic transaction processing functions are executed.  The EOTI is the stage during which automatic functions scheduled before the End of Financial Input and after the Beginning of Day stages, will be executed.
+End of Year
+The End of Year Process refers to all the tasks to be performed before commencing transactions for a new financial year. The Profit and Loss Account must be closed before entering the transactions for the New Year.
+Holiday Rule
+Automatic processes such as accruals, schedule payments, generation of advices or messages that fall due on a holiday are processed either on the last working day before the holiday or the first working day after the holiday, depending upon the holiday rule.
+Instance
+The parameter allotted to a function from any module that indicates the order in which it will be executed in the AEOD processing.
+Predecessor
+The function immediately preceding the function that has been allotted an instance for the AEOD processing.
+ 
+BILLS AND COLLECTIONS
+Accounting Head
+The specific GL created in any module of the FLEXCUBE system into which the accounting entry would be posted.
+Accounting Role
+The general ledgers and sub-ledgers maintained as a chart of accounts in FLEXCUBE may be classified logically under different categories, each of which is called an accounting role.
+Aging Analysis
+Ageing is the process of keeping track of the age of a transaction from the date of its entry till the date of its being cleared in full.
+Basis Amount
+The higher limit of the slab or tier to which a charge is to be applied, either as a fixed rate or flat amount.
+Bill Crystallization
+If the foreign Currency bill is not paid by a customer after a certain number of days after the Maturity Date, the foreign currency amount of the bill is crystallized and transferred to a local currency GL. 
+Charge Rule
+The nature of application of a charge can be defined uniquely as a charge rule.
+Clauses
+Statements that go along with documents sent under a bill.
+Clean or Documentary bills
+Clean bills under an LC require no documents for processing, as opposed to documentary bills, which require documents.
+Collection Bill
+A bill (not under an LC) is sent for collection to the collecting/remitting bank. 
+Customer Category
+A group of customers with logically similar features or attributes.
+Discounted Bill
+A bill for which the interest applicable is computed and deducted up front at the time of initiation.
+Discrepancies
+Inconsistencies or differences that are found during processing Incoming or Outgoing bills those are under LC’s.
+Documents
+Standard papers, files or records that are required and used in most countries for the processing of documentary bills.
+Drawee
+The party that is required to pay a certain due amount of money to the drawer of a bill.
+Drawer
+The party in favor of which the bill is drawn.  The drawee is required to pay the drawer of the bill the due sum of money.
+Events
+The different stages in the processing life-cycle of a contract.
+Exceptions
+Any oversights, lapses or errors due to any party, that are encountered in the processing life cycle of a bill.  The party concerned must resolve the exception. FLEXCUBE generates tracers or reminders indicating the exceptions, addressed to the concerned party.
+Free Format Text (FFT)
+A set of instructions and statements pertaining to the processing of a bill.  Standard FFT’s do appear on correspondence and messages sent to the parties involving the bill.
+Floating Interest
+In a contract, the interest that is applicable based on prevailing market rates, unlike a fixed rate, which is fixed at the time of initiation of the contract.  The interest could be applied each time the prevailing market rate changes or periodically.  A spread could be applied on a floating interest rate.
+Grace days to penalty
+In case of repayment made by the drawee after the repayment date, the grace period is the number of days after the repayment date for which no penal interest is charged.
+ICCF Rule
+A rule that identifies the manner in which appropriate charges and fees, as well as interest components and commissions, can be applied on a transaction in a product in FLEXCUBE.
+Instruction Codes
+Unique identifiers maintained in the Instruction Codes Maintenance for the standard set of directives or statements that are to be applicable to a bill.
+Letter of Credit (LC)
+A secure instrument that guarantees payment to a trader in international markets, and in long distance trading. An LC may involve one or more bills.
+Main interest
+When more than one interest component is applicable on a contract involving a product, one of the components may be designated as the main interest component for the contract.  It helps identify and differentiate the different interest components applicable for the component.
+Operation
+Any action, procedure or function that can be performed on a bill.  The list of such operations includes Advance, Payment, Collection, Negotiation, Discounting, Purchase, Acceptance and so on.
+Receivable components of a bill: The components of a bill that is due to be received by the drawer of the bill.  Apart from the bill amount, the other receivable components could be interest, charges, fees, commissions and so on.
+Rediscounting
+Offering a discounted bill for further discounting, close to the maturity date.
+Sight and Usance
+Terms indicating the tenor of a bill under a product (i.e., when the bill will be paid by the drawee) Sight bills are paid immediately.  Usance bills are paid after a stipulated usance period.
+Tracers
+A reminder or intimation, generated by FLEXCUBE, to be sent to the party that is responsible for resolving any exception that is encountered during the processing of a bill.
+Transaction Code
+An identifier for each accounting entry that describes the nature (i.e., debit or credit) of the entry.
+Transit Days
+The period for the realization of proceeds of a sight bill or a usance bill that has matured. At the end of the transit days, the bill falls due for payment on the Maturity Date.
+Usance or Sight bill
+A sight bill under a product is to be paid on an immediate basis.  Usance bills are paid at the end of a stipulated usance period (tenor).
+ 
+CURRENT ACCOUNT AND SAVINGS ACCOUNT
+Amount Block
+The portion of the balances of a customer account that is designated to be set apart for specific purposes, and cannot be withdrawn.  The ‘blocking’ can be set up either on request from either the customer or the bank.
+Check Book
+One of the means that the bank provides to the customer for withdrawal of balances from the account.  It consists of a specified number of leaves, against each of which a specified amount can be drawn from the account balance.
+Effective Date
+The date on and following which an amount block on a customer account becomes effective.
+End Check Number
+The number of the last check in a range of checks against which a customer directs the bank to stop payment.
+Modification Number
+The serial number of a check status modification.  It is incremented serially each time the status of a check is modified.
+Start Check Number
+The number of the first check in a range of checks against which a customer directs the bank to stop payment.
+Stop Payment Instruction
+A directive from a customer to the bank instructing that payment against a check must be stopped.  The directive could specify an amount in respect of a check, a single check or a range of checks.
+ 
+CORE ENTITIES
+Account Class
+A group of customer accounts with similar characteristics and attributes.
+Account Statement Cycle
+The periodicity for the generation of account statements.
+Account Statement Type
+An indicator of the kind of account statement required to be generated periodically; this could be either a summary statement or a detailed one.
+Alternate Account Number
+Alternate account number is a unique identifier for a customer account, other than the main Account Number. This provision is made to enable tracking of accounts existing in the bank before the installation of FLEXCUBE.  For such accounts, you can capture the old account numbers as the Alternate Account Numbers.
+Available
+The amount available in a customer’s account, which can be drawn.
+Blocked 
+The amount that is blocked for other transactions, which the customer has entered into and not executed. At any point of time, the account balance cannot be less than the blocked amount.
+Corporate Parameters
+Information captured under customized parameters for corporate customers.
+Customer Category
+A group of customers with logically similar features or attributes.
+Dormancy Days
+The period following which customer accounts under a class are made inactive.
+Exposure Country
+This is the country of exposure of a customer. This information is maintained for Central Liability tracking.
+Identifier Name
+The name of the identification document furnished by the customer to the bank as proof of identity.
+Identifier Value
+The serial number, document number or any identification number by which the identifier name document can be uniquely identified.
+Joint Holder Code
+The account identifier codes given to joint holders of any customer account.
+Legal Guardian
+If the account holder is a minor, this is the legal guardian of the customer.
+Liability Number
+A code used to keep track of the credit limit facility granted to a customer.
+Limit Check
+A validation maintained for all accounts in an account class to see if there are adequate funds in the account.
+Loan Repayment
+The amount paid towards loan repayment.
+MTD (Month to Date)
+Indicates the turnover on an account for the current month and up to the current date. It is specified for both Credit and Debit turnovers.
+Narratives
+Specifications that help achieve a desired format for account statements.
+Natural GL
+The code of the GL to which the turnovers of all accounts in the account class will be reported.
+Reporting Lines
+The general ledger codes to which balances (debit or credit) of all accounts in an account class will be reported.
+Sub-limit
+The maximum credit amount that can be used by a customer account without requiring an override.  The sub-limit is specified for accounts for which the credit amount is limited to a part of the available line amount.
+Temporary OD End
+The date on which the temporary overdraft limit ceases to be effective.
+Temporary OD Limit
+The maximum overdraft allowed on an account, for a specified period of time.
+Temporary OD Start
+The date on and following which the temporary overdraft limit comes into effect.
+Tenure
+The duration for which a customer has been in professional employment.  This information is captured as part of the professional details for a customer.
+Uncollected Funds Limit
+On any given business day, the credit transaction amounts that have not been collected.
+Unposted Credits
+In a multi-branch or online activity (such as tele-banking or Internet banking) transactions that are posted into an account when the system is either not available or during End of Day run, are stored, to be posted into the system when the system is available.  Credit transactions of this nature are classified as unposted credits.
+Unposted Debits
+In a multi-branch or online activity (such as tele-banking or Internet banking) transactions that are posted into an account when the system is either not available or during End of Day run, are stored, to be posted into the system when the system is available.  Debit transactions of this nature are classified as unposted debits.
+ 
+CORE SERVICES
+Bank Default Currency Codes
+The currency parameters specified for a bank, which will be considered as default specifications.  The local currency, the discount currency, head-office currency and reporting currencies are the default currency codes defined for a bank.
+Customer Account Mask
+A format pattern consisting of logical elements that you build for the generation of customer account numbers.  The system uses the format to generate the customer account number.
+ERI Information
+Euro Related Information, typically the ERI currency defined for a counterparty and currency combination.  In settlement messages, you can provide the equivalent value of a component in the ERI currency.
+GL Mask
+A format pattern consisting of logical elements that you build for the generation of general ledger codes.  The system uses the format to generate the general ledger code.
+GL Online Update
+A preference specified for a bank, wherein updating of GL balances would take place online and not at the end of the working day.
+Interbranch Accounting Scheme
+The route specified for accounting due to inter-branch transactions.
+Interest Method
+The method to be used for   the calculation of interest in transactions. .
+Netting Suspense GL
+The general ledger in which you would book accounting entries related to settlement of netted Foreign Exchange contracts.
+Points Multiplier
+The multiplying factor used to compute the spread for a currency pair.
+Position Accounting
+A preference specified for a bank, by which the position with respect to any foreign currency would be obtainable.  A Position GL and Position Equivalent GL must be maintained for each currency, if position accounting is to be performed.
+Rounding Rule
+The rule for rounding off for decimal units of currency.
+Rounding Unit
+The nearest decimal unit to which the rounding rule must be effected.
+Suspense GL - Contingent
+The general ledger in which you would book accounting entries related to the contingent assets and liabilities GL categories if the accounts are closed or missing.
+Suspense GL – Real
+The general ledger in which you would book accounting entries related to the asset, liability, income and expense GL categories if the accounts are closed or missing.
+Transaction Code
+An identifier for each accounting entry that describes the nature (i.e., debit or credit) of the entry.
+Year-end Profit and Loss GL
+The account to which balances from the income and expense accounts are posted at the end of a financial year.  The profit and loss and turnover figures for the year are arrived at using the entries posted to this account.
+ 
+CENTRAL LIABILITY
+Credit Line
+A credit limit linked to each customer and account (or a customer, account and a specific product), against which transactions involving the customer are tracked.
+Revolving Line
+A credit line in which the availability of funds against it increases (or is reinstated to the original level) in the event of repayments.
+Non Revolving Line
+A credit line in which the availability of funds against it does not increase (or is not reinstated to the original level) in the event of repayments.  Any utilization reduces the funds available under the line.
+Omni Lines
+Credit lines available across products and accounts, in FLEXCUBE.
+Main Line
+A credit line created for the first time.  Subsequently created lines may be placed under it and report to it as sub-lines.
+Sub Line
+A credit line that is placed under a higher, main line and reports to it.
+Bank wide clean risk
+The bank-wide clean risk signifies the total exposure of the bank to FX deals entered into with all customers, that are settled on a given business day.
+Overdrawn Lines
+Credit lines, the limits in respect of which have been exceeded by the customer.
+Overdrawn Amount
+The amount by which the limits in respect of a credit line has been exceeded by the customer.
+Limit Revaluation
+The revision of credit limits due to changes in exchange rates of currencies involved in active contracts, accounts and collateral linked to the credit line.
+Collateral Revaluation
+The revision of credit limits due to changes in the market value of the security that backs collateral involved in active contracts and linked to the credit line. The change affects the collateral amount.
+Marketable Collateral
+Collateral that is linked to a credit line or limit, which is backed by a marketable security.
+Non-Marketable Collateral
+Collateral that is linked to a credit line or limit, which is backed by a non-marketable security.
+Clean Risk Limit
+The maximum that can be reached by a customer (or all customers) for FX deals that settle on a given business day.
+FX Clean Risk
+The FX clean risk signifies the total exposure due to all FX deals that are settled on a given business day.
+Increase Sensitivity
+The maximum upper limit for fluctuation in the value of a marketable security that is backing collateral.
+Decrease Sensitivity
+The maximum lower limit for fluctuation in the value of a marketable security that is backing collateral.
+ 
+DATA ENTRY
+Account Statement
+This specification indicates whether the transaction (posted using data entry module) must be made available while the statement for the account is generated.
+Amount Item
+The amount entry that is passed into a general ledger / sub ledger in the chart of accounts for each transaction.
+Authorization
+A facility provided for the purpose of cross-checking and verifying a transaction to ensure that it conforms to the parameters maintained for the branch.  After authorization, the transaction comes into effect and will be processed by the system.
+Authorization Amount Limit
+The maximum amount of a transaction that can be authorized by an authorizer user in the system.
+Authorizer
+A user who authorizes maintenance information records or transactions in FLEXCUBE.  The authorizer cannot be the same user who created the record.
+Batch
+A group of transactions of a particular type.  All transactions of a particular type can be authorized on a business day by authorizing the batch into which they have been grouped.
+Branch Parameters
+Static information maintained for a branch, containing mandatory operations and default parameters that would be specific to the branch.  Also known as branch conditions.
+Check Total
+This value indicates the total debit and total credit (if known upfront) generated by the transactions to be posted in the batch.
+Clearing Bank Codes
+Unique identifiers maintained in FLEXCUBE for banks that are participants in a clearing house.
+Currency Denominations
+Discrete lots in which paper currency is available.  Each lot may contain one or more units of currency.
+Customer Category
+A group of customers with logically similar features or attributes.
+Default Charge Collection Account
+The account to which the charges for the transaction will be charged. This account can be defined at the product level as “Transaction” account or “Offset” account.
+Denomination Tracking
+Tracking currency denominations for teller type transactions at a branch.
+Exchange Rate Type
+The type of exchange rate that you can specify for a product.
+Exchange Rate Variance
+The difference between the default value and the changed value of an exchange rate employed for currency conversion.  Limits can be set for the variance.
+Expense type tax
+Tax component that is paid by the customer to the government.  It is booked as an expense, into a tax expense account.
+Financial Cycle Information
+Indicates the financial cycle to which the branch belongs, and the cycle under which the information will be posted.
+ICCF Rule
+A rule that identifies the manner in which appropriate charges and fees, as well as interest components and commissions, can be applied on a transaction in a product in FLEXCUBE.
+Journal Type Transactions
+Transactions used to record accounting entries passed to internal accounts, due to interest adjustments, tax payments made by the bank, and so on.  A journal transaction generates only a single accounting entry, either a debit or a credit.
+LCY Equivalent Variance Limit
+The limit imposed on the local currency equivalent for a transaction.  If the local currency equivalent is changed, the variance must be below this limit.
+Maximum Variance
+The limit beyond which an exchange rate cannot be changed over and above the default value and an override is not possible.
+MIS Code 
+A unique grouping of MIS (Management Information System) details such as Transaction MIS, Composite MIS, Cost MIS and so on, maintained for management reporting purposes.
+Multi-offset Transactions
+Transactions resulting in a single debit entry and multiple credit entry (or a single credit entry and multiple debit entries).
+Netting
+Summing of two or more accounting entries passed to an account for the same event, so as to arrive at a net figure for posting.
+Normal Variance
+The limit within which exchange rates are allowed to be changed over and above the default value, without requiring an override.  This limit corresponds to the minimum variance.
+Offset Account
+The account to which offset entries are to be passed to balance the main entry resulting from a transaction.
+Offset Currency
+The currency of the offset entry resulting from a transaction.
+Overdraft 
+The amount by which an account has been overdrawn.
+Period Code
+An identifier for the financial period during which a journal transaction was entered.
+Product
+An identifier, in FLEXCUBE, for any type of service that a bank offers its customers.  A set of attributes and preferences are maintained for the product, which will apply to the processing of any contracts, transactions or deals involving the product (service).
+Product Group
+A group under which a product is logically classified, under which logically similar products are placed together.
+Product Remarks
+Descriptive text about a product.
+Product Slogan
+Text or phrase that could be used as a declaration or an announcement of the product, to customers.
+Rekey options
+The fields that are to be keyed in by an authorizer of a transaction, for the purpose of cross-checking, when the transaction is being authorized.  Complete details of the transaction will only be displayed when the authorizer rekeys the values for these fields.
+Rule Type
+Indicates the basic nature of an ICCF (interest, commission, charge or fee) rule.
+Shortage/Overage GL
+A general ledger used for posting accounting entries related to differences between actual transaction amounts and amounts available in denominations.
+Signature Verification
+The process of authentication of a customer’s signature.  It is typically enforced for transactions involving amounts exceeding a certain specified limit.
+Static Data
+Information that is maintained at a central location that could be commonly used by different modules of FLEXCUBE.  Most of this information is maintained as a one-time activity, and may not need to be changed or maintained afresh subsequently.
+Teller Till Balancing
+Reconciling the physical balance in a till with the balance according to the system records.  The operator performs this activity during the Beginning of Day process.
+Teller Type Transaction
+A transaction performed by a teller. Cash deposits and withdrawals, sale and purchase of traveler checks and clearing checks are all teller type transactions.
+Tenor Basis 
+The basis upon which a charge or interest rule is defined, if applied based on the tenor of a contract.
+Till
+A cash register used by a teller for the purpose of disbursing withdrawals and receiving deposits. A till is usually linked to a safe or a vault.
+Transaction Account
+The account of the customer involved in a transaction.  For transactions in respect of which internal entries are passed, it could also be a general ledger.
+Transaction Amount Limit
+The maximum and minimum limits which represent the allowable range for the amount of a transaction.
+Transaction Codes
+Unique identifiers maintained in FLEXCUBE for different types of cash transfers (transactions) within the branch.  A transaction code is also an identifier for each accounting entry that describes the nature (i.e., debit or credit) of the entry.
+Transaction Limits
+The limits placed on the size of a transaction that a teller is allowed to input.
+Vault
+A safe where the physical cash assets of a bank (or branch) are kept. A bank may maintain one or more vaults.
+Withholding type tax
+Tax component that is paid to the government by the bank on a customer’s behalf.  It is booked to a tax payable account.
+ 
+FCC-FCR INTERFACE GLOSSARY OF TERMS
+Bridge GL
+The GL in FCC to which entries are passed, when it is required to debit/credit a customer account that resides in FCR.  The entries passed to the Bridge GL are replicated in FCR.
+Limits
+For customer accounts set up in FCR that must be linked to a credit line in FCC, the limits are maintained in FCC.
+EOD
+The CASA end of day processes, which cannot be executed in FCR till the FCC Pre-GL process, has been executed.  This is because there may be FCC batch programs that need to debit/credit CASA accounts.
+BOD
+The Beginning of Day processes in FCC.  After the FCR-FCC handoff, both FCR and FCC can run the End of Day batch programs independently. FCC is ready to upload the GL entries that are handed off from FCR, and the FCC BOD process can be run.
+CASA
+The Current and Savings Account component of FLEXCUBE UBS.
+Application Processing System (APS)
+The Loans Account Opening Process system of FLEXCUBE UBS.
+FLEXCUBE Retail (FCR)
+The component of FLEXCUBE UBS that automates the retail operations of a bank.
+FLEXCUBE Corporate (FCC)
+The component of FLEXCUBE UBS that automates the corporate operations of a bank.
+Collateral Pool
+Collaterals are classified into pools in FCC.
+TD Accounts
+Time Deposit accounts, which are maintained in FCR.
+ 
+FOREIGN EXCHANGE
+Forward Rate
+The exchange rate used for revaluing a forward foreign exchange contract according to the NPV (rebate) method.
+Discounting Rate
+For a currency, these are the rates used in arriving at the Net Present Value of an outstanding foreign exchange contract.
+Spot Rate
+The exchange rate used for a spot deal, on a given business day.
+Static Data
+Information maintained in FLEXCUBE, commonly used by many modules, which is not typically altered over a period of time after it is entered into the system.
+Base Date
+The date, on which forward rates are specified, subsequent to which all forward FX contracts will use the specified rates.
+Period Code
+An identifier for a specific period or tenor, for which forward rates are maintained.
+Netting Type
+The manner in which FX deals with a specific counterparty can be netted.  Netting could be done according to each currency pair or each currency.
+Product
+An identifier, in FLEXCUBE, for any type of service that a bank offers its customers.  A set of attributes and preferences are maintained for the product, which will apply to the processing of any contracts, transactions or deals involving the product (service).
+Product Group
+A group under which a product is logically classified, under which logically similar products are placed together.
+Product Remarks
+Descriptive text about a product.
+Product Slogan
+Text or phrase that could be used as a declaration or an announcement of the product, to customers.
+Accounting Head
+The specific GL created in any module of the FLEXCUBE system into which the accounting entry would be posted.
+Accounting Role
+The general ledgers and sub-ledgers maintained as a chart of accounts in FLEXCUBE may be classified logically under different categories, each of which is called an accounting role.
+Amount Tag
+The amount entry that is passed into a general ledger / sub ledger in the chart of accounts for each transaction.
+Netting
+Summing of two or more accounting entries passed to an account for the same event, so as to arrive at a net figure for posting.
+Transaction Code
+An identifier for each accounting entry that describes the nature (i.e., debit or credit) of the entry.
+Rekey Options
+The fields that are to be keyed in by an authorizer of a transaction, for the purpose of cross-checking, when the transaction is being authorized.  Complete details of the transaction will only be displayed when the authorizer ‘rekeys’ the values for these fields.
+Tenor Type
+Indicates whether the tenor is fixed or rolling.  It is used for limits tracking. If the tenor type is Rolling, it indicates that the limits utilization moves from the initial tenor to the current tenor, according to the time to maturity of the deal. 
+Split Value Date
+The Value Date of either the bought or sold leg for an FX deal.  If split value dates are specified, both value dates could be different.
+Revaluation Frequency
+The frequency at which the foreign currency assets and liabilities are revalued according to current exchange rates.
+Exchange Rate Variance
+The difference between the default value and the changed value of an exchange rate employed for currency conversion.  Limits can be set for the variance.
+Clean Risk
+The limit on total value of deals settled with a counterparty on a given business day.
+Total Risk
+The limit on total exposure to a counterparty due to all deals done with that counterparty.
+Brokerage Rule
+A rule that identifies the calculation of a specific brokerage component applicable on a contract.
+Brokerage Booking Method
+The manner in which the brokerage payable to a broker must be booked.  It could be either at the time of initiation of the contract (in advance) or at liquidation of the contract, as arrears.
+Batch Interface
+The manually triggered interface between FLEXCUBE Dealer and FCC, wherein deal information is handed off from FLEXCUBE Dealer to FCC.
+Online Interface
+Job-based interface between FLEXCUBE Dealer and FCC, wherein events such as authorization of FX and MM deals in the FLEXCUBE Dealer system trigger transmittance of deal information to FCC.
+ 
+FUNDS TRANSFER
+Account Head
+The general ledger and / or sub ledger in the chart of accounts that is debited or credited every time a balance type account is liquidated or interest is accrued in respect of it.
+Account Servicing Institution
+The financial institution where the ordering customer’s account resides.
+Account with Institution
+The institution designated by the ordering customer, at which the beneficiary will receive the transfer payment.
+Accounting Role
+The category under which any general ledger / sub ledger is classified.
+Amount Item
+The amount entry that is passed into a general ledger / sub ledger in the chart of accounts for each transaction.
+Autobook Function
+A function that will process funds transfer contracts for which the rate pickup is specified to be done on a future date
+Bank Transfer
+A funds transfer contract involving the movement of funds from the ordering institution to the beneficiary institution.
+Booking Date
+The date on which the contract is entered into the FLEXCUBE system.
+Charge Bearer
+The entity that would bear the service costs incurred by the bank that processes a contract.
+Cover Payment
+The reimbursement of a correspondent bank on behalf of the ordering institution.
+Credit Advice
+An advice generated by the account servicing institution, which indicates crediting the receiver’s account.
+Customer Transfer
+A funds transfer effected by the financial institution of the ordering customer, to the financial institution of the beneficiary.  The initiating entity (i.e., the ordering customer) and the receiving entity (i.e., the beneficiary) are not financial institutions.
+Debit Advice
+An advice generated by the account servicing institution, which indicates debiting the ordering customer’s account.
+Incoming Transfer
+A funds transfer contract, which results in an inflow of funds to the bank.
+Instrument Preferences
+The instrument details for funds transfers, as maintained in the Product Preferences for a funds transfer product.
+Intermediary
+The entity that bridges the gap between the ordering customer’s correspondent and that of the beneficiary of a funds transfer.
+Internal Transfer
+A funds transfer contract, which results in funds being moved between customer accounts within the bank.  The bank manages internal transfers on behalf of its customers.
+Message Preferences
+The messaging details for outgoing transfers, as maintained in the Product Preferences for a funds transfer product.
+Netting
+Summing of two or more accounting entries passed to an account for the same event, so as to arrive at a net figure for posting.
+Ordering Customer
+The customer who requests for a transfer of funds contract, also known as the Remitter.  The cycle of a funds transfer contract begins with the ordering customer.
+Ordering Institution
+The financial house that is approached by an ordering customer to initiate the funds transfer contract.  The institution processes the funds transfer contract on behalf of the ordering customer.
+Our Correspondent
+The name of the correspondent bank through which an ordering customer puts through a funds transfer contract.
+Outgoing Transfer
+A funds transfer contract, which results in an outflow of funds from the bank.
+Override Limit
+The limit within which exchange rates are allowed to be changed over and above the default value, without requiring an override.  If the rate variance exceeds this limit, an override is necessary for the changed rate to be accepted.
+Product
+An identifier, in FLEXCUBE, for any type of service that a bank offers its customers.  A set of attributes and preferences are maintained for the product, which will apply to the processing of any contracts, transactions or deals involving the product (service).
+Product Group
+A group under which a product is logically classified, under which logically similar products are placed together.
+Product Remarks
+Descriptive text about a product.
+Product Slogan
+Text or phrase that could be used as a declaration or an announcement of the product, to customers. 
+Rate Preferences
+The specifications as to the rate types and when exchange rates are to be picked up to be applicable on funds transfer contracts involving a product.
+Rate Update Function
+A function used to process funds transfer contracts for which a rate update or refresh is required, as specified in the Product Preferences.
+Rate Variance
+The difference between the default value and the changed value of an exchange rate employed for currency conversion.  Limits can be set for the variance.
+Receiver’s Correspondent
+The name of the correspondent bank who will receive the funds that are payable to the receiver or the beneficiary.
+Rekey Options
+The fields that are to be keyed in by an authorizer of a transaction, for the purpose of cross-checking, when the transaction is being authorized.  Complete details of the transaction will only be displayed when the authorizer ‘rekeys’ the values for these fields.
+Settlement Route
+Depicts the route that a funds transfer will take before it actually reaches the ultimate beneficiary. 
+Spot Date
+The date on which the contract is to be settled.  The number of spot days specified for the contract is taken into consideration.
+Transaction Code
+An identifier for each accounting entry that is used to track a particular transaction.
+Value Date
+The date on which a contract comes into effect.  This date could be a future date, past date or today.
+ 
+GENERAL LEDGER
+GL
+The module that forms the single repository in FLEXCUBE for financial information and accounting for all types of accounts held by the bank.  Balances, turnovers and so on for any account or type of account can be maintained and consolidated. 
+Leaf GL
+A GL that reports to a node GL and is not itself reported to by any other GL.
+Node GL
+A GL that reports to a main head GL above it and is itself reported to by leaf GLs’ under it.
+MIS Class
+An identifier for the kind of entity that is identified as the basis for MIS reporting.
+LCY
+The local currency in which profit and loss entries can be posted to a GL. Reporting will obtain details in this currency.
+FCY
+A foreign currency in which record of the profit and loss entries posted to a GL can be maintained.
+Chart of Accounts
+The structure or framework in which the different GL’s are maintained, in the bank.
+Contingent Asset
+One of the categories of head GL’s that can be maintained in the structure, for the posting of entries related to contingent assets.
+Contingent Liability
+One of the categories of head GL’s that can be maintained in the structure, for the posting of entries related to contingent liabilities.
+Position Accounting
+Maintaining the position of a foreign currency, by setting up a Position GL and a Position Equivalent GL for each foreign currency.
+Reporting Lines
+Unique codes assigned to each financial information head required for the Head Office and Central Bank.  Reporting lines can be associated with the appropriate GL’s that would report to them.
+ 
+INTEREST AND CHARGES
+Account Class
+A group of customer accounts with similar characteristics and attributes.
+Account Head
+The general ledger and / or sub ledger in the chart of accounts that is debited or credited every time a balance type account is liquidated or interest is accrued in respect of it.
+Accounting Role
+The category under which any general ledger / sub ledger is classified.
+Amount Item
+The amount entry that is passed into a general ledger / sub ledger in the chart of accounts for each transaction.
+Charge Basis
+The event or basis, which necessitates levying a charge on a balance type account.
+Charge Product
+A set of details and attributes that will govern the application of charges levied on balance type accounts. A charge product is linked with a charge basis.
+Data Elements
+The components that are used to build an interest rule for the application of interest on a balance type account in FLEXCUBE. There are two categories of data elements – system data elements and user data elements.
+Effective Date
+The date on which the values specified for a user data element come into effect.  Different values for a user data element can be maintained with different effective dates, for each account class and currency combination on which a product is applied.
+Formula
+An expression linking system data elements and user data elements together in an interest rule. When computed, the result of the expression is the interest that is applicable on a balance type account. 
+General Condition
+A method of applying an interest product to an account by linking an account class to the product. The product is therefore applicable to all accounts under the class.
+Interest Product
+A set of details and attributes that will govern the application of interest to be paid or received on balance type accounts.  An interest product could be linked with an interest rule.
+Interest Rule
+The method or logic according to which interest is calculated for a balance type of account in FLEXCUBE.  The rule is built using components such as system and user data elements linked together through a formula.
+Liquidation Frequency
+The frequency at which liquidation is to be done for balance type accounts under a product.
+Periodicity of Application
+An attribute of an interest rule that determines when the rule formula is to be applied during the interest period; whether on every change during the period (i.e., daily), or on the last day of the period.
+Product
+A set of details and attributes that will govern the application of interest (to be paid or received) or charges levied on balance type accounts.  A product could be linked with an interest rule or a charge basis. The interest attributes of the product will be applied to any account linked to the product either by a general condition (i.e., through an account class) or a special condition (i.e., directly).
+Product Group
+A group under which logically similar products are placed together.
+Rate Code
+An identifier for a floating interest rate maintained for a specific currency and account type, in the Rates Maintenance.
+Slab Structure
+The pattern in which interest can be applied on a balance type account.  In this pattern, interest is calculated according to the rate applied for the slab in which the entire amount falls.
+Special Condition
+A method of applying an interest product to an account by linking the account itself directly to the product. The attributes defined for the product are therefore applicable to the account.
+System Data Element
+A component that is used to build an interest rule for the application of interest on a balance type account in FLEXCUBE.  A system data element is constantly updated in the database and is always readily available for use as an interest-rule building component. An example of a system data element would be the balance in a customer account.
+Tier Structure
+The pattern in which interest can be applied on a balance type account.  In this pattern, the entire amount is split into tiers, and interest is calculated according to the rate applied for each tier.
+Transaction Code
+An identifier for each accounting entry that describes the nature (i.e., debit or credit) of the entry.
+User Data Element
+A component that is used to build an interest rule for the application of interest on a balance type account in FLEXCUBE.  Unlike a system data element, a user data element is not updated in the database by the system, but is specified by the user, and can take different values as specified. An example of a user data element would be the rate at which interest must be calculated.
+ 
+LETTERS OF CREDIT
+Clean or Documentary LC
+Clean Letters of Credit require no documents for processing, as opposed to Documentary Letters of Credit, which require documents.
+Import LC
+An incoming Letter of Credit that involves an applicant who is a customer of the processing bank.
+Export LC
+An outgoing Letter of Credit that involves the beneficiary who is a customer of the processing bank.
+Guarantees
+Guarantee is a form of comfort, issued by the bank to its client, in cases where the bank is not very comfortable with the credit rating of the customer. Unlike a letter of credit, in which the bank has to pay on maturity, the amount is payable only on invocation of guarantee by the creditor.
+Shipping Guarantees
+A guarantee extended during the period in which the goods are under transit.
+Standby Guarantees
+Guarantees for performance of a contract.  These are immediately realizable whenever the beneficiary presents a declaration to the issuing bank that the named party has not fulfilled the terms of contract.
+Red Clause LC
+A Letter of Credit, the terms of which allow the confirming bank to make advance payments to the beneficiary before documents are received, towards anticipatory drawings on the part of the beneficiary.
+Revocable LC
+A letter of credit that can be revoked or terminated without prior notice or consent from the parties involved.
+Irrevocable LC
+A letter of credit that cannot be revoked or terminated without prior notice or consent from the parties involved.
+Transferable LC
+A letter of credit, the terms of which allow transference of the LC to other buyers, sellers or parties.
+Non-transferable LC
+A letter of credit, the terms of which disallow transference of the LC to other buyers, sellers or parties.
+Revolving LC
+A letter of credit, the terms of which allow the restoration of the original LC amount (or the tenor) after its full settlement, without any further changes to any of the other terms.  A revolving LC could be either revocable or irrevocable.
+Non-Revolving LC
+A letter of credit, the terms of which disallow the restoration of the original LC amount (or the tenor) after its full settlement.  A non-revolving LC could be either revocable or irrevocable.
+Sight LC
+A letter of credit that involves immediate payment to the seller by the negotiating bank.  The payment is later reimbursed by the issuing bank.
+Usance LC
+A letter of credit that involves payment to the seller at maturity i.e., (at a future date).  The drawee bank obligates itself to make the payment.
+Open-ended LC
+A letter of credit that has no definite maturity or expiry date.
+Issuing Bank
+The bank at which a letter of credit is first initiated by the buyer or importer.  It is the bank at which the buyer account is debited for the trade.  The advising bank sends the documents for the trade to the issuing bank, from where they are released to the buyer.
+Advising Bank
+The bank from which the seller or exporter involved in a letter of credit receives payment towards the trade.  The issuing bank sends the letter of credit to the advising bank.  The documents regarding the trade are sent to the advising bank by the seller.  The advising bank then sends the documents to the issuing bank.
+Confirming Bank
+The bank that ratifies the trade involving a letter of credit, to the advising bank.  Tracers (messages) requesting letters of confirmation of the trade are sent to the confirming bank.
+Document Code
+A unique identifier in FLEXCUBE for a standard paper, file or record that is required and used in most countries for the processing of a documentary letter of credit.
+Document Type
+A group of similar document codes in FLEXCUBE.  The document type identifies the nature of all document codes under it.
+Clause Code
+A unique identifier in FLEXCUBE for a statement that goes along with documents sent under a letter of credit.
+Clause Type
+A group of similar clause codes in FLEXCUBE.  The clause type identifies the nature of all clause codes under it.
+Goods Code
+A unique identifier in FLEXCUBE for the standard stock or commodity that is traded under a letter of credit.
+Text Code
+A unique identifier in FLEXCUBE for a set of instructions and statements (the free format texts) pertaining to the processing of a letter of credit.  Standard free format texts do appear on correspondence and messages sent to the parties involving the letter of credit.
+Product
+An identifier, in FLEXCUBE, for any type of service that a bank offers its customers.  A set of attributes and preferences are maintained for the product, which will apply to the processing of any contracts, transactions or deals involving the product (service).
+Product Group
+A group under which a product is logically classified, under which logically similar products are placed together.
+Product Remarks
+Descriptive text about a product.
+Product Slogan
+Text or phrase that could be used as a declaration or an announcement of the product, to customers.
+Accounting Head
+The specific GL created in any module of the FLEXCUBE system into which the accounting entry would be posted.
+Accounting Role
+The general ledgers and sub-ledgers maintained as a chart of accounts in FLEXCUBE may be classified logically under different categories, each of which is called an accounting role.
+Amount Tag
+The amount entry that is passed into a general ledger / sub ledger in the chart of accounts for each transaction.
+Netting
+Summing of two or more accounting entries passed to an account for the same event, so as to arrive at a net figure for posting.
+Event
+The occurrence or process that initiates the generation of an advice during the processing of a contract in FLEXCUBE.
+Transaction Code
+An identifier for each accounting entry that describes the nature (i.e., debit or credit) of the entry.
+Rekey Options
+The fields that are to be keyed in by an authorizer of a transaction, for the purpose of cross-checking, when the transaction is being authorized.  Complete details of the transaction will only be displayed when the authorizer ‘rekeys’ the values for these fields.
+Positive Tolerance
+The increment, expressed as a percentage that must be made to the amount of a letter of credit, to arrive at the Maximum LC Amount.
+Negative Tolerance
+The reduction, expressed as a percentage that must be made to the amount of a letter of credit, to arrive at the Minimum LC Amount.
+Tenor
+The period during which a letter of credit is viable or effective.
+Commission Calculation Type
+The basis upon which commission applicable on a letter of credit is to be computed.  It can be computed on a periodic or non-periodic basis.
+Commission Collection Type
+The manner in which commission applicable on a letter of credit can be collected.  Commission could be collected either in advance or as arrears.
+Rate Override Limit
+The limit within which exchange rates (for an LC) are allowed to be changed over and above the default value, without requiring an override.  If the rate variance exceeds this limit, an override is necessary for the changed rate to be accepted.
+Rate Stop Limit
+The limit above which a change in exchange rates (for an LC) over and above the default value cannot be specified.  If the rate variance exceeds this limit, the changed rate will not be accepted.
+Tracer Code
+A unique identifier for a tracer in FLEXCUBE.  A tracer is a reminder or intimation, generated by FLEXCUBE, to be sent to the parties involved in a letter of credit.
+Auto Closure
+Closing a letter of credit automatically after its expiry date.  Usually, the date of automatic closure is specified for an LC.  By default, the date for automatic closure is taken to be 30 days after the expiry date.
+Automatic Reinstatement
+The automatic restoration of the amount (value) of a revolving letter of credit for which the unutilized value is zero, in FLEXCUBE.  When the Beginning of Day (BOD) process is run on any given business day, any LC’s’ for which automatic reinstatement of value has been specified are restored in value, provided the un-availed portion of the amount is zero.
+Cumulative (Revolving Details)
+Revolves in Time: An attribute of a revolving letter of credit, according to which, the LC amount and Maximum Liability Amount is reinstated or reset based on the frequency specified for such reinstatement.
+Revolves in Value
+An attribute of a revolving letter of credit, according to which, the LC amount is reinstated or reset at the point when the availability under the LC is reduced to zero, due to an availment.
+Credit Type
+Indicates the type of credit for which the LC is being processed, i.e., Straight or Negotiable.
+Credit Mode
+Indicates the mode of payment through which the LC will be settled - Sight, Acceptance, Negotiation or Deferred.
+Media Type
+The medium used to send advices to each of the parties involved in a letter of credit.
+Partial Shipment
+Transportation through shipping, in part, or of a portion of merchandise under a letter of credit.  Partial shipment is allowed only if permitted for the letter of credit.
+Trans-shipment
+Transportation by shipping, of merchandise under a letter of credit, across countries.  Trans-shipment is allowed only if permitted for the letter of credit.
+Position Entries
+Linked to Reference Number/Account: A letter of credit can be linked to a deposit or a customer account.  The Reference Number identifies the deposit that the LC is linked to, and the Account identifies the customer account.
+Linked Amount
+The portion of the contract amount of a letter of credit contract that is linked to a deposit or a customer account.
+Availment Type
+The nature of any availment under a letter of credit.  An availment could be a payment, an acceptance, or negotiation.
+Commission Collection
+The collection of commission applicable on a letter of credit.  Commission may be collected by the issuing bank or the advising bank, for an LC, or against amendments to an LC.
+Commission Calculation
+The computation of commission applicable on a letter of credit.
+Limit Tenor Calculation
+The limits within which the tenor of a tenor-based letter of credit can be set.
+Process Till
+This parameter indicates how automatic events falling due on holidays will be processed.  If the specification is ‘System Date’, it indicates that all the processing of events will be done till the system date only.  If the specification is ‘Working Day – 1’, all automatic events falling due on the holiday will be processed by the batch process as part of the End of Day processes on the last working day before the holiday.
+Accrual Entries Level
+The level at which commission accrual entries for letters of credit must be passed, by the automatic commission accrual process.  Two levels are possible – product-level, indicating that a single entry for all the LC’s for which commission was accrued automatically will be passed; or contract level, wherein accrual entries will be passed for each of the LC’s for which commission was accrued.
+ 
+LOANS, DEPOSITS AND MONEY MARKET
+Product
+An identifier, in FLEXCUBE, for any type of service that a bank offers to its customers. A set of attributes and preferences are maintained for the product, which will apply to the processing of any contracts, transactions or deals involving the product (service).
+Product Group
+A group under which a product is logically classified, under which logically similar products are placed together.
+Product Remarks
+Descriptive text about a product.
+Product Slogan
+Text or phrase that could be used as a declaration or an announcement of the product, to customers.
+Accounting Head
+The specific GL created in any module of the FLEXCUBE system into which the accounting entry would be posted.
+Accounting Role
+The general ledgers and sub-ledgers maintained as a chart of accounts in FLEXCUBE may be classified logically under different categories, each of which is called an accounting role.
+Amount Item
+The amount entry that is passed into a general ledger / sub ledger in the chart of accounts for each transaction.
+Netting
+Summing of two or more accounting entries passed to an account for the same event, so as to arrive at a net figure for posting.
+Trigger
+The occurrence or process that initiates the generation of an advice during the processing of a contract in FLEXCUBE.
+Transaction Code
+An identifier for each accounting entry that is used to track the transaction.  
+Rekey Options
+The fields that are to be keyed in by an authorizer of a transaction, for the purpose of cross-checking, when the transaction is being authorized.  Complete details of the transaction will only be displayed when the authorizer ‘rekeys’ the values for these fields.
+Payment Method
+The manner in which the main interest payable on a loan contract is reckoned.  The methods could be Bearing, Discounted or True Discounted.
+Schedule Type
+The kind of repayment schedule defined for a loan contract.  It could be amortized, normal or capitalized.
+Schedule Frequency
+The frequency at which the repayment of the loan amount will be amortized in equated installments over the tenor of the contract.
+Accrual Frequency
+The frequency at which components of a loan contract such as interest, charges or commissions must be accrued over the tenor of the contract.
+Tenor
+The default period during which a contract is effective.   The default Maturity Date of a contract is calculated from tenor.
+Negotiable
+This is applicable only for Certificate of Deposit.
+Rate Variance
+The difference between the default value and the changed value of an exchange rate employed for currency conversion.  Permissible limit can be set for the variance.
+Amortization Type
+The method according to which amortization is applied on a loan contract for which the type of schedule defined is amortization.  It could be any of two types, Reducing Balance or Rule 78.
+Cascading Schedules
+A schedule falling due on a holiday can be moved backward or forward, based on the Mover Forward or Move Backward preference. By cascading, the subsequent schedules are also moved forward or backward accordingly. If schedules are not cascaded the frequency will be reckoned from the schedule due date of the previous month before moving forward or backward. 
+Maturity Type
+The manner in which the maturity of a loan contract is reckoned.  There are three possible types – Fixed, Call or Notice Days.
+Commitment Type
+An attribute of a commitment contract, which determines whether the amount of the contract is reinstated when a loan linked to the contract, is paid.  If the commitment is revolving, the contract amount is reinstated, and if it is non-revolving, the contract amount is not reinstated.
+Verify Funds
+The check for availability of funds in a customer account before it is debited for the purpose of liquidation of any of the components of a loan contract.  If not specified for a contract, this check is not performed in the system.
+Cluster ID
+A unique identifier for a cluster defined for a deposit product.  A cluster deposit is a deposit contract involving a deposit product for which a cluster has been defined.
+Reducing Balance
+A method of calculation of interest component for amortized type of repayment. The interest is calculated on the outstanding principal for the current period.
+Rule 78
+A method of calculation of interest component for amortized type of repayment. The interest is calculated on the outstanding principal based on remaining tenor divided by total tenor.
+Holiday Currency
+The currency of a loan contract, for which the holiday table of the currency must be checked, before the payment schedule is drawn up.  By default, the currency that is checked is the loan currency.  If any other currency is specified, then both are checked.
+Liquidation Type
+For a loan, the liquidation type indicates whether the loan is liquidated manually or automatically on maturity.
+Mode of Liquidation
+The manner in which the payable components of a loan contract are to be settled in FLEXCUBE. The modes available are automatic and manual.
+Interest Rate Revision Schedule
+The schedule defined for the refreshing of interest rates from the Floating Rates table, for floating rates applicable on a loan contract.
+Interest Rate Revision Frequency
+The frequency specified for the rate revision schedule defined for floating rates applicable on a loan contract.
+Pre-Payment
+Repayment of principal (whole or part) of a loan contract before the repayment schedule falls due.  Prepayment involves a re-computation of subsequent interest schedule amounts.
+Main Interest
+When more than one interest component is applicable on a contract involving a product, one of the components may be designated as the main interest component for the contract.  It helps identify and differentiate the different interest components applicable for the component.
+Interest Application Method
+The basis upon which interest on a loan contract is applied.  Interest on a contract could be applied as an amount, or a fixed rate, or floating rate.
+Interest Collection Method
+The manner in which the main interest payable on a loan contract is collected or liquidated.  The methods could be Bearing, Discounted or True Discounted.
+Repayment Type
+The kind of repayment schedule defined for a loan contract.  It could be amortized, normal or capitalized.
+Mode of Rollover
+The manner in which a loan contract is renewed or rolled over.  IT could be automatic or manual.
+Residual Amount
+A limit placed on the residual payables on any pending component that has not been liquidated, of a loan for which the principal is to be liquidated.  A check is made that the residual pending payables for any component other than the principal, must be individually less than or equal to the residual amount specified.  The loan is liquidated only if this check is successful.
+Billing Advice
+The reminder sent to the customer of a loan contract a stipulated number of days before the repayment date of a schedule, intimating that a payment is due.
+Delinquency Notice
+The intimation to the customer of a loan contract that a payment in the repayment schedule is overdue.
+Automatic Renewal
+Rolling over a loan automatically, on maturity.  The old loan is automatically liquidated and a new one initiated.
+Cluster Deposit
+A cluster deposit involves the input of a deposit as a multiple of specific units of a certain currency. All operations concerning the principal, like drawing up payment schedules for the principal, change in principal, etc., must be in multiples of the cluster size specified for the deposit.
+Overnight Borrowing
+Typically, an inter-bank borrowing arrangement in the federal funds market that involves loans with the tenor of one day.
+Placement
+Placement could be overnight, weekly or monthly.
+ 
+IMPLEMENTATION
+Status Report
+A report obtained at regular intervals during an implementation project that facilitates the process of overseeing the stages of development of the project, and timely revealing of potential problems.
+Parallel Run
+The process of running an existing system simultaneously with FLEXCUBE and reconciling the result, to facilitate the conversion towards the FLEXCUBE system.
+Contingency Plan
+A fallback procedure geared towards assessing and minimizing risks due to unexpected faults in the software, hardware or network.
+Project Pan
+A schedule for the project, with an exhaustive listing of the goals and objectives of the project, as well as all envisaged activities and their associated timeframes. The plan also includes details of resource needs and deployment of resources.
+System Trial Run
+A test run of the FLEXCUBE system, which ensures that it meets the need, and also familiarizes users with the functions of the system.
+Management Documentation
+A repository of documents related to management aspects of the implementation project, consisting of such documents as the project plan, progress report and minutes of management review.
+System Documentation
+A repository of documents related to system aspects of the implementation project, consisting of such documents as the training, user, implementation and operation manuals, the software inventory list, enhancement specifications and the system test plan for trial run.
+ 
+MANAGEMENT INFORMATION SYSTEM
+MIS
+A reporting system for collection and dissemination of management information within an institution.
+MIS Class Code
+An identifier for the kind of entity that is identified as the basis for MIS reporting.
+MIS Cost Codes
+An identifier for the notional cost of a transaction, which can be linked to an account or a contract.
+MIS Head
+A classification for accounting entries for profitability reporting, indicating the manner in which the entry will be interpreted.  The classifications could be Balance, Income, Expense or Contingent.
+Pool Codes
+An identifier for any pool or repository that lends or borrows funds. The interest method used for applying refinancing rates for the pool will be used for the pool code.
+Refinancing Rates
+Refinancing rates used in arriving at the refinance income and expense for an entity
+GL Reports
+The reports obtained from a GL in FLEXCUBE can have MIS linkages, thus ensuring the reporting of balances against entities in the linkages.
+Cost Center
+A transaction type of MIS class, for which a report on transaction cost incurred, is desired to be obtained.
+Composite MIS Class
+A compound MIS class, containing both customer type and transaction type MIS classes.
+Account Class
+For MIS purposes, an account class to which an MIS cost code is linked.  It will be defaulted to all accounts under the class.
+Notional Cost
+A type of MIS cost code, which identifies the cost of processing an event for a contract.
+Real Income
+The actual income, not inclusive of refinancing rates and notional costs, for a branch, customer and pool code combination, in the MIS Profit and Loss Report.
+Real Expense
+The actual expense, not inclusive of refinancing rates and notional costs, for a branch, customer and pool code combination in the MIS Profit and Loss Report.
+Cumulative Average Balance
+The sum of monthly average balances for the reporting period, in the MIS Profit and Loss Report.  Refinancing rates are applied on this balance.
+ 
+MESSAGING SYSTEM
+Advice Format Maintenance
+The arrangement or format in which the bank would prefer to generate advices.
+Archiving Information
+Preserving messages, both current and old, for the purpose of future reference.
+Compatible Media
+A set of channels or modes of messaging that are compatible with each media type.
+Customer Address Maintenance
+Maintaining details of addresses used by customers for each media type in FLEXCUBE.
+Free-format Messages
+Messages that do not have any specific format (usually personalized messages to a specific customer) generated in a format that has been designed specifically and linked to a specific customer and address combination.
+Incoming Message Browser
+The browser screen in the messaging module in FLEXCUBE that is used to manually receive and process incoming messages or to route messages that are not automatically forwarded to a user queue.
+MCS Status
+The position of the Media Control System at any given point of time.  IT could either be active (able to receive and transmit information) or passive (no message would be routed through the node)
+Media Control System
+An external source over which messages emanating from and coming in to the FLEXCUBE system are transmitted.  This is usually maintained in the database of a branch, in a server or node.
+Media Maintenance
+Maintaining details of different types of media supported by the messaging system in FLEXCUBE.
+Media Type
+An identifier for a channel, mode or means of sending out messages.
+Messaging Branch Preferences
+The options that will define the way in which the messaging module operates in a branch.
+Messaging Preferences
+Messaging preferences govern the workflow aspects of the messaging system in FLEXCUBE. The following preferences can be defined:
+•	The number of days for which outgoing messages should be kept in the Browser.
+•	Whether a test word is required for Telex messages.
+•	The activities on a message that require authorization
+Node
+In a distributed network, the server where the database of a branch resides is called the node.  The Media Control System is also installed in this server.
+Outgoing Message Browser
+The browser screen in the messaging module in FLEXCUBE that is used to manually generate outgoing messages (when the background process is not running) or to display messages that have been generated by the background process.
+Query
+An inquiry that can be used to retrieve specific information regarding messages emanating from and coming into the branch through the messaging module.
+Retrieving Information
+Using a query to locate and view specific information regarding messages emanating from and coming into the branch through the messaging module.
+Wildcards
+Special characters that can be specified in a query instead of criteria, to retrieve information regarding messages emanating from and coming into the branch through the messaging module.
+ 
+RECONCILIATION
+Adjustment GL
+The GL to which un-reconciled entries with respect to the application of a Reconciliation Class are posted.
+Aggregation
+A process of summing transactions before they are matched and reconciled by the automatic matching process.  Certain criterion may be specified to select a transaction to be aggregated.
+Capture Sequence Number
+A serial number assigned to each entry posted, due to an internal transaction, to an internal account that is mapped to a Reconciliation Class, external entity and an external account.
+Closing Book Balance
+The balance in the external account as of the closing balance date, as indicated in the external statement.  It must be equal to the sum of the opening balance and the transaction amounts in the statement.
+Exceptions
+Any omissions or exclusions that occurred when details of an internal transaction were captured.
+External Account
+Any account maintained for an external entity in the reference bank (i.e., your bank)
+External Entity
+An entity (typically a bank) other than the reference entity (also typically a bank).  In FLEXCUBE, it would mean any bank apart from your bank.
+External Reference Number
+The reference number assigned to an external transaction. It can be used as a matching parameter during automatic matching of nostro entries.
+Internal Reference Number
+The reference number assigned to an internal transaction. It can be used as a matching parameter during automatic matching of nostro entries.
+Manual Matching
+Matching nostro entries manually by specifying the internal and external entries to be matched, as well as reconciliation class, the external entity and account and the internal account currency.
+Matching Rule
+A standard directive that can be applied during matching entries in nostro accounts.
+Mirror Reconciliation Class
+A type of Reconciliation Class that validates the debit or credit entries in the external statement, to see if they mirror the corresponding entries due to the internal transaction.
+Negative Tolerance
+The lower limit of the permissible tolerance range within which the value date of an external transaction must be found, for matching it with an internal transaction.
+Opening Book Balance
+The balance in the external account as of the opening balance date, as indicated in the external statement.  This value must be equal to the previous closing balance for the reconciliation class, external entity and external account.
+Positive Tolerance
+The upper limit of the permissible tolerance range within which the value date of an external transaction must be found, for matching it with an internal transaction.
+Reconciliation Class
+A set of matching rules, with the sequence in which the rules are to be applied.
+Replication Reconciliation Class
+A type of Reconciliation Class that validates the debit or credit entries in the external statement, to see if they replicate the corresponding entries due to the internal transaction.
+Sequence Number (Rule Application)
+The serial number that indicates the order in which the matching rules in a Reconciliation Class will be applied during automatic matching.
+Upload Sequence Number
+The serial number of the external statement that was uploaded from an external agency.
+ 
+SECURITIES
+Accounting Head
+The specific GL created in FLEXCUBE into which the accounting entry would be posted.
+Accounting Role
+The general ledgers and sub-ledgers maintained as a chart of accounts in FLEXCUBE may be classified logically under different categories, each of which is called an accounting role.
+Amount tag:
+Bank Portfolio: A portfolio into which the Bank does its own investment/trading operations.
+Batch Processes
+The End of Day & Beginning of day system processes which take care of processing requirements such as Profit/Loss booking, revaluations, accruals of interest etc.
+BOD
+The Beginning of day automatic batch process.
+Bonus
+When security is issued free of acquisition cost (in a specific ratio) to the existing holders of the security.
+Book Price
+The price of a debt security as shown on the investor’s balance sheet, for booking purposes. It usually has nothing to do with the market price of the security, and is usually different from it.
+Bought Interest
+Accrued interest to be paid by the buyer of a bond to the seller. If the bond is bought after the coupon ex date, the seller pays the buyer the interest for the period from deal settlement to the coupon payment date.
+Bullet Redemption
+The entire redemption value is given to the holder on one specified date.
+Call Option
+The option retained by an issuer of a security to prematurely redeem the instrument.
+Cash Dividend
+Dividend in cash (typically a percentage of the face value or a fixed amount per share) given by the issuer of an equity instrument to all holders of the security as on a certain date, typically on an annual basis.
+Contingent Asset
+An off-balance sheet asset of the bank.
+Costing Method (also called Portfolio Costing method)
+The method used to track the overall cost at which a basket (portfolio) of identical securities (which may have been purchased at different prices) is held. This cost will be used to determine the profit / loss arising out of the sale of a portion of the holding from that portfolio. Typical methods of costing would be Weighted Average, Last In First Out, and First In First Out methods).
+Coupon
+The annual rate of interest payable to the holder of a bond, on the face value of the bond. The coupon also refers to the certificate representing the bond, which is proof of the interest due on it.
+Counter Product
+In the Securities module, the exercise of a right or warrant is processed as a combination of four deals – sale of the right / warrant by the portfolio, buy of the right / warrant by the safe keeping location, buy of the underlying (resultant) security by the portfolio, sale of the underlying security by the safe keeping location.  The combination product used to trigger the sale of a right / warrant by a portfolio and the corresponding purchase of the right / warrant by the safe keeping location is known as the counter product.
+Cum Date
+The date following which a security trades inclusive of dividend due on it, or with accrued interest. 
+Customer Portfolio
+A portfolio managed by a bank or a financial entity on behalf of one of its customers. The bank enters all transactions on behalf of the customer into this portfolio.
+Deal Date
+Trade date or booking date of the deal. Cannot be later than the system date.
+Deal Matching
+This is one of the methods of costing of a portfolio. In this method, any sell deal has to be matched to an existing buy deal in the portfolio. The profit / loss on the sell deal is then computed by comparison to the matched buy deal.
+Deal Nominal:
+The number of units of a security bought / sold multiplied by the face value of the security.
+DSTL Date (delivery settlement date)
+Settlement date for the securities leg of a deal. On deal settlement, portfolio positions are converted to holdings.
+EOD
+The End of day automatic batch process.
+Equity
+Investment avenue in which the investor is becomes an owner of a firm’s stock, by means of purchase of stocks or options. A portion of the remaining profits is also due the investor.
+Ex Date
+The date following which a bond trades without the coupon, i.e., a stock-holder would not receive any dividends on it after this date.  The next coupon payment is made to the holder of the stock on and after ex-date, and not to the holder as of the coupon date. 
+Exchange rate variance
+The percentage difference between the exchange rates for a currency pair at a deal level and the exchange rates maintained by the bank. The normal and maximum exchange rate variances can be defined at the product level
+Expense Tax
+Tax paid by the bank to the government, which is booked as an expense in the profit and loss account of the bank (see also Withholding tax)
+FIFO (First In First Out)
+A method of valuating inventory, by which it is assumed that the older units are the first to be sold.
+Fixed Interest Bond
+A bond (debt security) for which interest on a fixed rate is payable periodically.  The rate is typically announced at the time of issue of the security. 
+Flexible Interest Bond
+A bond (debt security) for which interest on a floating market benchmark rate, such as the LIBOR is payable periodically.  The benchmark is typically announced at the time of issue of the security, while the actual rate gets determined during the course of the tenor and is periodically reset.
+Floor basis amount
+Minimum amount to be charged in a tiered tax structure.
+Forward deal
+A deal in which a price and quantity of sale/purchase of a security are agreed upfront, but delivery of the security and payment for the same happens on a future date.
+ICCF
+(Interest, Commission, Charge and Fee) The different charges and fees (including commissions and brokerage) and the interest components that are applicable on a contract are set up from the same ICCF Rule Details screen in FLEXCUBE.
+ICCF Rule
+An ICCF Rule identifies the calculation of a specific charge, fee, interest, commission or brokerage component applicable on a contract.
+Interest Class
+A specific type of interest component in FLEXCUBE, with specifically defined attributes, that could be applied on a contract.
+Intrinsic Value
+Value of a warrant / right / option, if exercised.
+ISIN
+International Securities Identification Number – unique number used to identify a security
+Issuer Portfolio
+Portfolio of securities issued by the bank.
+Issuer tax
+Tax withheld by the issuer of a security when disbursing cash dividends and coupons.
+LIFO
+(Last In First Out): A method of valuating inventory, by which it is assumed that the last units in are the first to be sold.
+Liquidation
+Conversion of an asset into cash (for instance, in repayment of a loan, coupon payment, and so on)
+Market of Issue
+The place where the security is issued. A market of issue usually has securities with similar / identical terms for interest calculation methods, ex dates, and so on.
+Market of Trade
+The place or exchange where a security is traded. The settlement period for a deal is usually the same for all securities traded on a particular market of trade.
+Market Price
+The price at which a security can be traded (bought or sold) in the open market.
+MM - Money Market
+The market for issuing and trading of short-term investment instruments, typically debt instruments such as bills, commercial paper, etc.  
+Money Settlement
+Settlement of the cash leg of a securities deal. 
+MSTL Date (money settlement date)
+Date of money settlement.
+Price Code
+Code used to identify prices of securities in a place of trade. A security can have multiple price codes associated with it.
+Product
+Any service that your bank offers to a customer can be defined as a product with specific attributes and components in FLEXCUBE. Therefore, for example, disbursement of short term loans could be a product.  The advantage of defining a service as a product is in the ease of operation of contracts in any of the services.  You can link the attributes and components applicable to any contract by linking it to a defined product.
+Product Combination
+For deals with two processing legs, you can define a combination product that would process both legs of the deal.
+Product Group
+A group under which a product is logically classified, under which logically similar products are placed together.
+Put Option
+An agreement that gives the option-holder the right to prematurely redeem a specified security at a pre-determined price within a specified time period.
+Quantity Redemption
+Redemption of a bond on different dates with resulting decrease in face value.
+Record Date
+The date on which an issuer of a security identifies all holders who will be entitled to a corporate action benefit.
+Redemption Price
+The value of the security at maturity.  It may exceed the actual face value of the security.
+Repos (Repurchase Agreements)
+An agreement a seller of securities (usually a security holder) makes with a buyer, to repurchase or “buy back” sold securities at a pre-determined price, on a specified date.
+Reverse Repurchase Agreement (Reverse Repo)
+An agreement a buyer of securities makes with a seller, to sell securities at a pre-determined price, on a specified date.
+Right
+An option agreement with a small tenor, which enables a stockholder to purchase shares of a new issue at a pre-determined price, over a specified period of time.
+S.W.I.F.T
+The Society for Worldwide Interbank Financial Telecommunication is an organization, which sets the standards and provides the infrastructure for confidential financial communication between financial market participants.
+Sake Keeping Location (SKL)
+The custody of collateral in any contract is called safe-keeping.  Therefore, banks store any bonds and money market instruments involved in a contract for a specified fee (bank custody), and dealers may also store, without a fee, at their custody bank, any securities customers have bought from them.
+The Safe Keeping Location refers to the custody location. It could be a bank, or a custodian.
+Securities
+General term used to refer to all tradable instruments such as equities, bonds, zero coupon bonds, warrants, rights, etc.
+Securities Deal
+A transaction in which a security is bought / sold.
+Security Settlement
+(See Deal settlement)
+Series Redemption
+Redemption of a series of a security with multiple series.
+SKL A/c
+In a safe keeping location the bank account that is the safe-keeping location for the collateral involved in a securities deal.
+Sold Interest
+(See bought interest)
+Spot Date
+The number of days (based on the market of trading) after the deal date on which a transaction settles.
+Spot Deals
+Deals with immediate settlement (i.e. settlement on the trading date) or a maximum tenor of two business days.
+Statement of Holding
+A statement sent to the customer, by the bank which is managing his portfolio giving details of the holdings in the portfolio, instrument wise as on a certain date.
+Statement of Transaction
+A statement sent to the customer, by the bank which is managing his portfolio giving details of the transactions done on his portfolio, during a certain specified time period.
+Stock Dividend
+Dividend that is given to the investor in the form of stock. This type of a dividend results in increasing the number of shares held by the investor.
+Tax Scheme
+A collection of tax rules used to calculate tax to be paid on different transactions.
+Tear-off Date
+The date on which a holding of an intermediate security (right, warrant) is created for a portfolio.
+The Adjusted Price
+This is the price of interest bearing instruments exclusive of the interest component.
+Tiers
+Trading date: Simply, the date of trade, or the date on which the trade is put through.  Settlement of the trade may be done either on the trade date or on a future date.
+WAC
+The weighted average cost of a security holding.
+Walk in Customer
+A customer who transacts with a bank in which no customer information file has been maintained for the customer.
+Warrant
+An option agreement enabling an investor to buy a specified number of shares at a pre-determined price. These options have terms of upto 5 or even 10 years, during which they are exercisable.
+Withholding Tax
+Withholding type tax is borne by the beneficiary on an income (either the bank or the customer). For instance, the tax on the brokerage paid would be borne by the broker.
+Working Days
+The days on which a bank branch is open for business and transactions can be conducted.
+YTM: Yield to maturity refers to the yield to an investor who buys an instrument and holds it to maturity. This is also the discount rate at which the Present value of all the cash flows of an instrument equals its current market price.
+ZCB (Zero Coupon Bonds)
+Securities from which no interest may be derived at maturity, and are usually sold at a discount. A fixed value is obtained at maturity.
+ 
+SECURITY MANAGEMENT SYSTEM
+User Profile
+The profile that uniquely identifies a user in FLEXCUBE.  It consists of the User ID, the user password and a list of functions to which the user has been granted access in the system.
+Restrictive Password
+A list of passwords that cannot be set for a user profile.
+System Time Level
+The time level assigned to the system in FLEXCUBE.  A user can only login to the system if the time level assigned to the user is higher than or equal to the system time level. During the end of day processes, the system time level is placed higher than the user level, thereby making it impossible for a user to log in during the execution of end of day processes.
+User Role
+A unique collection of access rights to functions that are commonly accessed by many users in FLEXCUBE.  A role can be linked to a user profile, thus granting the profile access to all the functions contained within the role.
+Role Profile
+A unique collection of access rights to functions that are commonly accessed by many users in FLEXCUBE.
+Access Control String
+The final access rights accorded to a user profile are displayed by the Access Control String.
+Maximum Transaction Amount
+The maximum amount that can be transacted in a single transaction.  This option can be specified for a user profile as well as a role.
+Maximum Authorization Amount
+The maximum amount of a transaction upto, which an authorizer can authorize.  
+ 
+STANDING INSTRUCTIONS
+Standing Instruction
+A service offered to customers that transactions requested on a regular basis, such as Regular Withdrawal or Regular Savings Plans, are processed without specific initiation each time.
+Standing Payment Order
+One of the most typical standing instructions, which involves making a payment on the customer’s behalf, and debiting and crediting one or more of the customer’s accounts.
+Standing Collection Order
+A standing instruction issued by a customer as a directive towards processing regular incoming payments into the customer account.
+Account Sweep (Sweep in and Sweep out)
+Standing instructions that are directives to ensure the maintenance of a constant balance value in the customer account. When the balance falls below this value, money is brought in from another account to replenish the shortfall, in the case of a Sweep In instruction. Similarly, in the case of a Sweep Out instruction, money will be moved out of the account when the balance reaches a certain minimum value.
+Variable Payment
+A standing instruction that involves the debiting of a different amount each time the instruction is processed.  Such instructions would be typically used for the payment of household bills.
+Retry Count
+The maximum number of times an instruction would be re-executed, in the event of non-availability of funds in the customer account.  This can be specified for an action code. 
