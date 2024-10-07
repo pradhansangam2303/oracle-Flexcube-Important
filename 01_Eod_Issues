@@ -1,0 +1,135 @@
+Issue: 1
+Maintenances are unauthorized. EOTI cannot be marked.
+
+Possible reasons:
+User forgot to authorise. 	
+Partially got authorised due to some reason
+
+Solutions
+Check if the user can delete the maintenance (Possible for the first time maintenance)
+
+Find out whether it is genuine case (user forgotten) or not by comparing STTB_RECORD_LOG and the maintenance master table.
+	
+	For Genuine case ask the EOD operator to authorize using some ID
+If it is not possible or if it is a case of partial authorization send script to authorize.
+
+Note	
+Ensure that the maintenance sequence number is in sync with the modification number so that this problem will not occur again
+
+
+Issue: 2
+Contracts are unauthorized. EOTI cannot be marked.
+
+Possible reasons:
+User forgot to authorise. 	
+Partially got authorised due to some reason
+
+Solutions
+Check if the contract / event can be deleted by the user (Use reassign option if the input user is not available) 
+Find out whether it is genuine case (user forgotten) or not by comparing CSTB_CONTRACT, CSTB_CONTRACT_EVENT_LOG, ACTB_DAILY_LOG.
+	
+	For Genuine case ask the EOD operator to authorize using some ID
+
+	
+If it is not possible or if it is a case of partial authorization, decide whether to delete or authorize the contract or entry and send script to delete/authorize.
+
+Note	
+Check if VD bal update is online or not. If online then check the impact if the deletion script is being used
+
+Issue: 3
+Fin balancing error EOTI. Debits and credits are not balancing (real, contingent etc) 
+
+Possible reasons:
+Batches are not balanced. User omission.
+
+Solutions
+Check if the sum of credits and debits (category wise) are balancing or not? Post entries to suspense GL manually to balance the same.
+Send script to automatically pass the entries if required.
+Note	
+Ensure that the automatic scripts are modified according to the situation before sending. Please take the record counts from relevant tables (like ACTB_DAILY_LOG etc) before and after the script to ensure the correctness of the script.
+
+
+Issue: 4
+Fin balancing error EOFI. GL is not balancing (Internal, Customer etc) 
+
+Possible reasons:
+
+
+Solutions
+Compare between ACVW_ALL_AC_ENTRIES and GLTB_GL_BAL and find the mismatched GLs. Also compare GLTB_GL_BAL and GLTB_CUST_ACC_BREAKUP if required. Find out the type of the GL which causes the mismatch and send the rebuild script accordingly.
+Note	
+Later versions of FLEXCUBE may have the inbuilt rebuild scripts in place. If the GL is still not balanced detailed analysis of GL structure might be required to find the root cause.
+
+Issue: 5
+Program taking more time to complete/still running. 
+
+Possible reasons:
+Locks in the database due to which the program is unable to continue
+More data to process than normal and hence taking more time to complete.
+
+Solutions
+	Identify the reason. Send lock scripts to see if there are dead locks in the system.
+Ask the EOD operator to check using some tools if the program is progressing or not. (Locks scripts can be run multiple time to check if different tables are getting locked, using tools like TOAD (kill trace session) etc operator can check if consistent gets, block gets etc are increasing)
+
+Kill the session creating DEAD lock after discussing with the EOD operator.
+
+Note	
+DB may require a bounce to clear the locks. This can be done after discussing with the EOD operator.
+
+Issue: 6
+FC Reports not running/taking too long time
+
+Possible reasons:
+Locks in the database due to which the program is unable to continue
+More data to process than normal and hence taking more time to complete.
+Invalid database objects.
+
+Solutions
+Identify the reason. Send lock scripts to see if there are dead locks in the system.( Reports mostly require read permission from the DB and hence locks may not affect. However some reports create temporary work tables while generating the report. These worktables may get locked and may have to be deleted).
+Ask the EOD operator to check using some tools if the program is progressing or not. (Locks scripts can be run multiple time to check if different tables are getting locked, using tools like TOAD (kill trace session) etc operator can check if consistent gets, block gets etc are increasing)
+Compile invalid objects, if required.
+
+Kill the session creating DEAD lock after discussing with the EOD operator.
+Note	
+DB may require a bounce to clear the locks. This can be done after discussing with the EOD operator.
+
+Issue: 7
+B O reports shows as completed but reports are not generated. 
+
+Possible reasons:
+Failure of auto script that calls BO reports. Availability of enough space in the hard disk.
+Solutions
+Try rerunning the reports. Do necessary adjustments in the EITB_PENDING_PROGRAMS and other related tables for re running the same. 
+	If the failure is in auto script, run the reports in manual mode.
+Note	
+It is noticed that file permissions on BO reports also results in failure of the same.
+
+Issue: 8
+FCR-FCC related issues (Flag on FCR side is not updated even after completing the FCC programs etc) 
+
+Possible reasons:
+	New set up/changes in the existing set up.
+
+Solutions
+Check if the programs are successfully completed. Check the required maintenances are available in FCC (FFTM_LO_MASTER) etc. 
+
+Note	
+Flag can be marked, after all the checks are satisfactory.
+
+Issue: 9
+Batch function aborted with error.
+
+Possible reasons:
+	Batch function aborted while processing a particular contract for which the relevant tables are not correctly populated. Supporting maintenance tables for the processing of the contract is missing (Currency rates, Floating rates etc) 
+
+Solutions
+Identify the contract and analyze it using the standard scripts. Mark the contract on Hold as a last option and analyse the same on the next day in detail.
+Note	
+
+
+
+
+
+General Rules 
+
+Any new maintenance or change in the existing maintenance?
