@@ -1,0 +1,33 @@
+DECLARE
+  l_transaction_amount NUMBER := 10.567; -- Example transaction amount
+  l_whole_part NUMBER;
+  l_decimal_part NUMBER;
+  l_suspense_amount NUMBER;
+  l_first_digit NUMBER;
+
+  suspense_gl_account VARCHAR2(20) := 'SUSPENSE_GL'; -- Example suspense GL account
+
+BEGIN
+  -- Split the transaction amount into whole and decimal parts
+  l_whole_part := TRUNC(l_transaction_amount);
+  l_decimal_part := l_transaction_amount - l_whole_part;
+
+  -- Extract first digit after the decimal
+  l_first_digit := TRUNC(l_decimal_part * 10) MOD 10;
+
+  -- Logic to decide how much to move to suspense GL
+  IF l_first_digit >= 5 THEN
+    -- If first digit >= 5, move the decimal part starting after the first digit
+    l_suspense_amount := l_decimal_part - TRUNC(l_decimal_part * 10) / 10;
+  ELSE
+    -- If first digit < 5, move the entire decimal part
+    l_suspense_amount := l_decimal_part;
+  END IF;
+
+  -- Now post l_suspense_amount to the suspense GL account
+  DBMS_OUTPUT.PUT_LINE('Posting amount ' || l_suspense_amount || ' to suspense GL: ' || suspense_gl_account);
+
+  -- Actual posting logic goes here, e.g., calling a function to create a GL entry
+  -- post_to_gl(suspense_gl_account, l_suspense_amount);
+
+END;
