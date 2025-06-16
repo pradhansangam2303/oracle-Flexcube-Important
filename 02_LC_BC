@@ -1,1 +1,69 @@
+=========================================================================================================================================================
+LC
+=========================================================================================================================================================
+
+Process LC Contract
+An LC contract is an instruction wherein a customer requests the bank to issue, advise or confirm a letter of credit, for a trade transaction. An LC substitutes a bank’s name and credit the parties involved. The bank, thus undertakes to pay the seller/beneficiary, even if the remitter fails to pay.
+
+For example, Ms. Keturah Smith (buyer or importer) in India and Mr. Silas Reed (seller or exporter) stationed in Paris agree to a sales contract. In this contract the buyer Keturah Smith, is required to arrange for her bank, Midas Bank, India (buyer's bank) to open or issue an LC in favor of the seller, Mr. Reed.
+
+Midas Bank sends the LC to Mr. Reed’s bank, Berliner Bank, Paris (advising bank). The advising bank then sends details of the credit to the seller, who is the beneficiary of the credit. On receiving the credit details Mr. Reed, ships the merchandise traded under the LC to Ms. Smith. He then presents the draft and documents to the advising bank. The negotiating bank pays Mr. Reed. On making the payment, Berliner Bank will send the documents to Midas Bank (issuing bank) and will debit the issuing bank account.
+
+The issuing bank examines the document and charges Ms. Smith’s account. It releases the documents to her allowing her to claim the merchandise.
+
+The sequence of the events involved, in processing the LC can be considered an LC contract. The specific letters of credit, thus processed for the customers of your bank constitutes a contract. An LC Contract would therefore require information on:
+Who is the buyer or importer
+Who is the seller or the exporter
+The operation that your branch is performing on the LC
+The merchandise traded under the LC
+Specifications for the transportation of the consignment
+The documents that should accompany the LC
+The amount for which the LC is drawn
+Details of the parties involved in the LC
+The type of LC you are processing
+The details of the insurance company under which the goods traded are covered
+You have defined products to group together or categorize LC which share broad similarities. Under each Product that you have defined, you can enter specific LCs based on your customers’ needs. Each of these will constitute a contract. While products provide a general framework and serve to classify or categorize LCs, contracts are customer specific.
+By default an LC inherits the attributes of the product to which it is associated. This means that you will not have to define these general attributes each time you input an LC involving a product.
+
+This topic contains the following sections:
+LC Contract Details
+View LC Contract
+Authorize a Contract
+Multilevel Authorization of a Contract
+Cancel LC
+Close LC
+Reopening LC
+Reverse LC
+Reassigning a Contract to another User
+Liquidate Components
+Import License Utilization
+View Import License Utilization Summary Details
+View Import License Utilization Details
+LC Contract Details
+View LC Contract
+This topic describes the procedure to view LC contract.
+Authorize a Contract
+This topic provides the systematic instruction to authorize a LC contract.
+Multilevel Authorization of a Contract
+Cancel LC
+Close LC
+Reopening LC
+Reverse LC
+This topic describes about reversing an LC.
+Reassigning a Contract to another User
+This topic provides systematic instruction to reassign a contract to another user.
+Liquidate Components
+This topic provides the systematic instruction to liquidate overdue components. i.e Normal and Penal components partially or fully.
+Import License Utilization
+This topic provides the systematic instruction to import license utilized by other banks.
+View Import License Utilization Summary Details
+This topic provides the systematic instruction to view import license utilization details.
+View Import License Utilization Details
+List of Glossary - Process LC Contract
+
+============================================================================================================================================================================================================
+BC
+============================================================================================================================================================================================================
+
+
 
