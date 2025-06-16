@@ -61,9 +61,152 @@ This topic provides the systematic instruction to view import license utilizatio
 View Import License Utilization Details
 List of Glossary - Process LC Contract
 
+When you issue an import LC or advise and confirm an export LC, you would track your liability against the party on behalf of whom you are undertaking a liability. For an import LC, you would track the exposure against the applicant while for an export LC that you confirm, you would do so for the issuing bank.
+
+In Oracle Banking Trade Finance, credit limit tracking is done using credit lines allotted to a customer. The credit line allotted to the party against whom you want to track your liability, should be indicated while you capture the details of an LC. In the case of an amendment, from advise of an export LC to advise and confirm, you can indicate the credit line during the amendment also.
+
+You can specify Central Liability details for an LC, in the LC Contract Party details screen. To invoke this screen, you have to click on the Parties tab from the ‘Contract Main’ screen.
+
+The amount that is tracked will be the LC Liability Amount. It is arrived at as follows:
+
+Liability Amount = Maximum LC Amount + Liability% of the LC amount
+
+In the case of an LC revolving in time, the liability amount will be calculated taking into account all the scheduled reinstatements.
+
+This topic contains the following details:
+Specify whether Limit Tracking is Required
+Specify Limit Tracking Tenor
+Import LC - Non Revolving Limit Utilization
+Indicate Credit Line under which the Liability Amount must be Tracked
+Specify whether Limit Tracking is Required
+Specify Limit Tracking Tenor
+Import LC - Non Revolving Limit Utilization
+Indicate Credit Line under which the Liability Amount must be Tracked
+Parent topic: Credit Limit Tracking for LC
+
+
 ============================================================================================================================================================================================================
 BC
 ============================================================================================================================================================================================================
 
 
+1.1 Introduction
+A Bill, as an instrument of international trade, is the most commonly used method for a seller to be paid through banking channels. Besides credit risk considerations, bills are the customary business practice for trade and a particularly important fee-earning service for any bank.
 
+The Bills and Collections (BC) module supports the processing of all types of bills, both domestic and international. It handles the necessary activities during the entire life cycle of a bill once booked.
+
+To empower your bank in handling a high volume of credit and to enable you to provide superior services to the customers of your bank, Oracle Banking Trade Finance provides you with the following features:
+The Bills and Collections module supports the processing of all types of international and domestic bills like:
+Incoming Bills under LCs
+Incoming Bills not under LCs
+Outgoing Bills under LCs
+Outgoing Bills not under LCs
+Incoming Collections
+Outgoing Collections
+Usance or Sight Bills
+Documentary or Clean Bills
+Create a new product or copy the details of an existing bill on to a new one and modify it to suit your requirements. This renders the input of the details of a bill faster and easier.
+You have the flexibility to create and customize a product to suit almost any requirement under a bill. The bills associated with the product will bear characteristics that you define for it.
+Design the BC module to handle the interest, charges, related to a bill and record amendments to the original terms of the bill.
+The BC module actively interacts with the LC module of Oracle Banking Trade Finance. This enables easy retrieval of information for bills drawn under the issued LC at the bank. The default most of the details maintained for the LC to the bill when you indicate the reference number of the LC involved in the bill. This eliminates the need to re-enter the details of the LC all over again.
+
+The Central Liability sub-system automatically controls the booking of a bill against the credit lines assigned to the customer before the bookings. Oracle Banking Trade Finance also supports tracking your bank’s exposure for a bill to several parties.
+
+You have the option to automate periodic processes such as:
+The application of floating interest rates to the components of a bill as and when they change.
+The movement of a bill from a given status to another.
+Accrual of interest due to a bill.
+Liquidation of bills on the liquidation date that you indicate.
+Generation of tracers on the due date.
+Process these as part of the batch processes run at BOD or EOD. The system automatically calculates the date on which the events should take place, based on the frequency and the date specified for the bill.
+
+The module also supports automated follow-up and tracer facility for payments and acceptance. Automatically the Tracers generate at an indicated frequency until a resolved discrepancy.
+
+When a repayment against the bill, is not made on the due date, based on the requirement perform the ageing analysis for the bill. Define the number of days that the bill should remain in a given status, the sequence in which a bill should move from one status to another and also indicate the direction of movement (forward or reverse). Follow-up on the repayment of a bill by generating reports which detail the status of ageing bills.
+
+Depending on the processing requirements of your bank, define and store the standard documents, goods, clauses, INCO terms and instructions and free format texts. Incorporate and print the details onto the output document of the bill by entering the relevant code. This eliminates entering the details of standard components of a bill every time you need to use them.
+
+Bills are carried over several stages during the day. After the entered bill, verify and authorize on-line before further processing.
+
+Generate the Information services for managerial and statistical reporting such as on-line transactions, status report and the immediate retrieval of information of the bills processed at your bank.
+
+Oracle Banking Trade Finances’ Graphic User Interface (GUI) facilitates ease of input. Option lists provided in the module is both efficient and easy to use.
+
+The media supported include Mail, Telex and SWIFT.
+
+The BC module supports and handles the following functions:
+Open/Amend a bill
+The authorization of bill contracts.
+The reversal and liquidation of interest and charges.
+Customer inquiries.
+The generation of tracers and advice.
+The generation and printing of reports.
+On-line help - indicates that you can invoke global help by making use of the Help option in the Menu bar. You can also invoke on-line context sensitive help, which is made available to you, if you strike the hot key <F1> while in the application. A window pops up displaying information associated with the field from which you invoked it.
+
+Parent topic: Overview of Bills and Collections
+
+
+1.2 Operations on a Bill
+The operations that perform on a bill depend on the trade finance product type you are processing. Further, the messages and advices that are generated for the bill are determined by the operation you perform on the bill. The interest, charges or fees vary for each operation that you perform on the bill.
+
+Bills are classified into following two categories:
+Import Bills
+Export Bills
+All types of incoming bills (international and domestic) financed by your bank are termed Import bills. Similarly, all outgoing bills (international and domestic) financed by your bank are termed Export bills.
+
+The operations that perform on a bill have been diagrammatically represented below:
+Figure 1-1 Operations on a bill
+
+
+Description of Figure 1-1 follows
+Description of "Figure 1-1 Operations on a bill"
+The system allows you to effect a change of operation for the following operation types:
+Acceptance to Advance (automatic facility provided)
+Acceptance to Discount
+Collection to Purchase
+Discount to Collection
+Purchase to Collection
+Acceptance to Forfaiting
+Discount to Forfaiting
+Collection to Transfer
+Collection to Discount
+Collection to Coacceptance
+Acceptance To Free of Payment
+Collection To Free of Payment
+Acceptance To Coacceptance
+Coacceptance To Discount
+For instance, while processing a discounted acceptance bill, need not enter a new bill to discount the bill. Amend the operation type from acceptance to discount.
+
+SWIFT Messages for an Import Bill
+SWIFT Messages for an Export Bill
+Parent topic: Overview of Bills and Collections
+
+4.1 Introduction
+A contract is an instruction, wherein, a customer (drawer) approaches your bank to purchase, negotiate, discount, or send for collection, a financial instrument called a bill. This written instrument is an instruction instructing the draw of the bill to pay a certain sum of money in favor of your bank or at the order of your bank.
+
+Such instruction involves a sequence of events but is treated as one contract in Oracle Banking Trade Finance.
+
+For example, Ms Keturah Smith (exporter or drawer) in India draws a bill on Mr Silas Reed (importer or drawee) stationed in Paris in which the exporter Keturah Smith instructs Mr Silas Reed to pay the amount quoted on the bill to her bank Midas Bank, India, (exporters bank) or to the order of Midas Bank. Midas Bank after endorsing the bill in favor of Mr Reed’s bank - Berliner Bank (collecting bank) sends the bill for collection. The collecting bank, on receiving the bill and it’s supporting documents, requests Mr Reed to make a payment against the bill. Berliner Bank will then remit the bill amount to Midas Bank (issuing bank), and debit Mr Reed’s account.
+
+The collecting bank releases the documents to Mr Reed, allowing him to claim the merchandise.
+
+The sequence of events involved, to affect the bill can be considered a bill contract. Thus, the specific bills processed for the customers of your bank can be defined as a contract.
+
+A Bills Contract would, therefore, require information on:
+Who is the Drawer of the bill?
+Who is the Drawee of the bill?
+Is the bill drawn under an LC?
+Is it a Sight or Usance or multi-tenor bill?
+The operation that your branch is performing on the bill
+The amount for which the bill is drawn and the currency in which it is expressed
+Details of the parties involved in the bill
+Details of the collecting bank (for export bill) or the remitting bank (for import bills)
+Details of the merchandise that was traded
+The documents that should accompany the bill
+Specifications for the transportation of the consignment
+The Insurance Company and the Policy Number
+You have defined products to group together or categorize bills, which share broad similarities. Under each product that you have defined, enter specific bills, based on the needs of your customers. Each of these will constitute a contract. While products provide a general framework and serve to classify or categorize bills, contracts are customer specific.
+
+By default, a bill inherits all attributes of the product to which it is associated. This means that you will not have to define these general attributes, each time you input a bill involving a product.
+
+Parent topic: Processing Bills
