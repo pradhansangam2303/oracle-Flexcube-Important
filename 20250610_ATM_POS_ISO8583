@@ -1,3 +1,70 @@
+What's ISO 8583 & Message Flow - Part Two
+
+Message Flow
+This section specifies message flow for ATM and POS transactions. It shows how messages are exchanged and the routing and settlement impact associated with a given transaction. Each flow description includes a diagram showing which messages are exchanged between the acquirer, issuer, and switch.
+
+1. Financial Transaction Message Flow
+Financial transactions (01xx), (02xx), and (04xx) are used to process cash withdrawals, balance inquiries, purchases, adjustments, and cancellations. Except for balance inquiries, these transactions have a financial impact on cardholder accounts and result in the updating of system settlement totals.
+
+A 0100/0200 message is a request to approve and post a financial transaction or to inquire about an account balance.
+
+Message type codes are used to identify the general function of messages, and one Message type code is required in each message. The message types in the table are divided according to the ISO 8583 standard message classes. A Message Type Identifier (MTI) is a 4-digit numeric field that describes each message class & function. Some common MTIs are as below:
+
+No alt text provided for this image
+1.1. Successful Transactions
+Successful Transaction
+(1, 2) Acquirer initiates a 0100/0200 message whenever it accepts another member’s card for processing. The message is a request for authorization of the transaction to the issuer. It is routed and logged through the network.
+Network & through Issuer shall respond within a pre-set time with a 0110/0210 message to either authorize or decline the acquirer’s 0210/0110 request.
+
+1.2. Network Time-Out on an Outstanding Financial Request
+Network Time Out
+Switch times out on an outstanding request to the issuer (0210 response is late or never received).
+
+(1, 2) Acquirer initiates a 0100/0200 message whenever it accepts another member’s card for processing. The message is a request for authorization of the transaction to the issuer. It is routed and logged through the network.
+(3, 4) in case the network times out on an outstanding request to the issuer, the switch shall generate a 0420 reversal advice message to the issuer to cancel the original 0100/0200 request.
+(5) Network shall also respond to the acquirer with a 0110/0210 message which shall include response code 91 in field DE-39. This informs the acquirer that the issuer is inoperative.
+(6) Switch shall expect a 0430 response from the issuer.
+Note: Acquirer shall decline the transaction and advise the cardholder that the time out occurs on his transaction.
+
+1.3. Acquirer Time-Out on an Outstanding Financial Request
+Acquirer Time Out
+The switch fails to respond to the acquirer within the pre-set time.
+
+(1, 2) Acquirer initiates a 0100/0200 message whenever it accepts another member's card for processing. The message is a request for authorization of the transaction to the issuer. It is routed and logged through the network.
+(3, 4,5, 6) In case the network fails to respond to the acquirer with a 0110/0210 message within the pre-set time, the acquirer shall initiate a 0420 reversal message to the issuer through the network, Network shall respond with a 0430 message (Reversal Response) to Acquirer.
+(7, 8) if the response in 0110/0210 is approved then the network shall forward a 0420 reversal message to the issuer. The issuer shall respond with a 0430 message (Reversal Response) to the network. If the response in 0110/0210 is denied then the network shall not forward the 0420 reversal message to the issuer.
+Note: Acquirer shall decline the transaction and advise the cardholder.
+
+1.4. Reversal Transaction Flow
+Reversal Transaction
+The device fails to finish the transaction after the acquirer receives approval. This could be due to technical error, Acquirer failure to deliver the response to the cardholder leads to canceling the transaction.
+
+(1, 2) Acquirer initiates a 0100/0200 message whenever it accepts another member’s card for processing. The message is a request for authorization of the transaction to the issuer. It is routed and logged through the network.
+(3, 4) Issuer shall respond within a pre-set time with a 0110/0210 message to either authorize or decline the acquirer’s 0100/0200 request, network will forward the 0110/0210 to the acquirer.
+(5, 6) in case the device fails to complete the process after the acquirer received Approval. The acquirer shall initiate a 420 reversal message to the network, switch shall respond with 0430 (reversal response) to the acquirer.
+(7, 8) Network shall forward 0420 reversal messages to the issuer. The issuer shall respond with 0430 messages (Reversal Response) to the network.
+
+After showing the transaction flow, let's see each ISO 8583 Message component.
+2. Authorization Transaction Request (0100) Acquirer to Issuer
+No alt text provided for this image
+* Foreign currency transactions only. || ** If the transaction is from an EMV card, elements P-22, P-23, and P-55 must be present. || *** Required if the transaction entry point captured Track 2 data. Required for POS transactions.
+
+3. Authorization Transaction Request Response (0110) Issuer to Acquire
+No alt text provided for this image
+* Foreign Currency Only
+
+4. Financial Transaction Request (0200) Acquirer to Issuer
+Financial Transaction Request (0200) ISO 8583
+* Foreign currency transactions only
+
+5. Financial Transaction Request Response (0210) Issuer to Acquirer
+Financial Transaction Request Response (0210) ISO 8583
+* Foreign currency transactions only
+
+==============================================================================================================
+==============================================================================================================
+
+
 MTI	Meaning	Usage
 0100	Authorization Request	Request from a point-of-sale terminal for authorization for a cardholder purchase
 0110	Authorization Response	Request response to a point-of-sale terminal for authorization for a cardholder purchase
